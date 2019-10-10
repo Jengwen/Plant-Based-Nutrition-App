@@ -1,0 +1,52 @@
+{
+  "users": [],
+  "recipes": [],
+  "nutrients": [
+      { "id": 1, "name": "Protein" },
+      {
+        "id": 2,
+        "name": "Fat"
+    },
+    {
+        "id": 3,
+        "name": "Carbohydrates"
+    },
+    {
+        "id": 4,
+        "name": "Fiber"
+    },
+    {
+        "id": 5,
+        "name": "Iron"
+    },
+    {
+        "id": 6,
+        "name": "Calcium"
+    },
+    {
+        "id": 7,
+        "name": "Potassium"
+    },
+    {
+        "id": 8,
+        "name": "Vitamin D"
+    }
+
+],
+  "recipenutrients": [],
+  "activitylevels": [
+    { "id": 1, "name": "Sedentary" },
+    {
+      "id": 2,
+      "name": "Low Active"
+    },
+    {
+      "id": 3,
+      "name": "Active"
+    },
+    {
+      "id": 4,
+      "name": "Very Active"
+    }
+  ]
+}
