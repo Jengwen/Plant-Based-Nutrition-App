@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import {Button} from "react-bootstrap"
-import Auth0Client from "./auth/Auth";
+import Auth0Client from '../auth/Auth';
+import "./home.css"
 
 class Home extends Component {
   render() {
     return (
 <>
-<h1 id= "main-heading">Considering a Plant Based Diet</h1>
+<h1 id= "main-heading">Considering a Plant Based Diet?</h1>
 <h2 id= "second-heading">How Do I Know What to Eat?</h2>
 <section id="login">
     <p>Create an account to get a personalized nutrition report, recipes, and more.</p>
-<Button  id="register"
+ <Button  id="register"
             variant="light"
             size="lg"
             onClick={() =>{Auth0Client.signIn()}}>Register Here</Button>

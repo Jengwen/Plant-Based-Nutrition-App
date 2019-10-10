@@ -1,41 +1,52 @@
 {
-  "users": [],
+  "users": [
+    {
+      "aud": "auth0|5d9df000fb75430e1b802ecb",
+      "name": "avery",
+      "id": 1
+    }
+  ],
   "recipes": [],
   "nutrients": [
-      { "id": 1, "name": "Protein" },
-      {
-        "id": 2,
-        "name": "Fat"
+    {
+      "id": 1,
+      "name": "Protein"
     },
     {
-        "id": 3,
-        "name": "Carbohydrates"
+      "id": 2,
+      "name": "Fat"
     },
     {
-        "id": 4,
-        "name": "Fiber"
+      "id": 3,
+      "name": "Carbohydrates"
     },
     {
-        "id": 5,
-        "name": "Iron"
+      "id": 4,
+      "name": "Fiber"
     },
     {
-        "id": 6,
-        "name": "Calcium"
+      "id": 5,
+      "name": "Iron"
     },
     {
-        "id": 7,
-        "name": "Potassium"
+      "id": 6,
+      "name": "Calcium"
     },
     {
-        "id": 8,
-        "name": "Vitamin D"
+      "id": 7,
+      "name": "Potassium"
+    },
+    {
+      "id": 8,
+      "name": "Vitamin D"
     }
-
-],
+  ],
   "recipenutrients": [],
   "activitylevels": [
-    { "id": 1, "name": "Sedentary" },
+    {
+      "id": 1,
+      "name": "Sedentary"
+    },
     {
       "id": 2,
       "name": "Low Active"

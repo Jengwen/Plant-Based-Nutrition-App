@@ -10,7 +10,6 @@ class Callback extends Component {
     fetch(`http://localhost:5002/users?aud=${auth0Client.getProfile().sub}`)
       .then(matchingUser => matchingUser.json())
       .then(matchingUser => {
-        console.log("This is our array of employees that have the current user's aud", matchingEmployee);
 
         // If the the fetch call comes back empty, it means that the user who just logged in with Auth 0 doesn't exist in our json-server database. We need to register them!
         if (matchingUser.length === 0) {

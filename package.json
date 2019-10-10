@@ -1,8 +1,10 @@
 {
-  "name": "plant-based",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "auth0": "^2.20.0",
+    "auth0-js": "^9.11.3",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "react": "^16.10.2",

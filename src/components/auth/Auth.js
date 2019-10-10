@@ -1,4 +1,4 @@
-import auth0 from 'auth0-js';
+import auth0 from "auth0-js"
 import AuthConfig from './AuthConfig';
 
 class Auth {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NavBar from "./nav/NavBar"
+import NavBar from "./navbar/NavBar"
 import ApplicationViews from "./ApplicationViews"
 import {withRouter} from 'react-router-dom';
 import auth0Client from './auth/Auth'

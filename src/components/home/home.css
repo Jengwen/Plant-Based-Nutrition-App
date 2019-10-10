@@ -1,0 +1,13 @@
+#main-heading {
+    color: #82846d;
+    text-align: center;
+}
+#second-heading {
+    color: #82846d;
+    text-align: center;
+}
+#login {
+    display: flex;
+    display: inline;
+    color: #95a472
+}
