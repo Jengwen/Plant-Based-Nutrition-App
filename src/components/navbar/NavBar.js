@@ -4,6 +4,7 @@ import "./NavBar.css";
 import auth0Client from "../auth/Auth";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../../logo.png"
 
 class NavBar extends Component {
   signOut = () => {
@@ -15,19 +16,20 @@ class NavBar extends Component {
   render() {
     return (
       <header>
+        <img src="src/logo.png" alt="leaf logo"/>
         <h1 className="site-title">
-          Personal Plant Based Nutrition
+          Personalized Plant Based Nutrition
           <br />
           <small></small>
         </h1>
         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/home">
-         <img
-        src="../../../src/logo.png"
+         {/* <img
+        src="logo.png"
         width="30"
         height="30"
         className="d-inline-block align-top"
-        alt="leaf logo"/>
+        alt="leaf logo"/> */}
         </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

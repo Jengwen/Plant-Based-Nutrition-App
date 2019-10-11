@@ -10,6 +10,7 @@ return (
     <h2 id="report-heading">Personalized Nutrition Report</h2>
     <div id= "calories">
 <h3 id="calorie-header">Calories:</h3>
+
     </div>
     <div id="macro">
     <h3 id="macro-header">Macronutrients:</h3>
