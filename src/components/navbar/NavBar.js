@@ -21,11 +21,18 @@ class NavBar extends Component {
           <small></small>
         </h1>
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/home">Home</Navbar.Brand>
+          <Navbar.Brand href="/home">
+         <img
+        src="../../../src/logo.png"
+        width="30"
+        height="30"
+        className="d-inline-block align-top"
+        alt="leaf logo"/>
+        </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              {/* <label>{auth0Client.getProfile().name}</label>
+              {/* <label>{auth0Client.getProfile().name}</label> */}
               <Button
                 id="new-event"
                 variant="light"
@@ -33,7 +40,7 @@ class NavBar extends Component {
                 onClick={this.signOut}
               >
                 Sign Out
-              </Button> */}
+              </Button>
               <Nav.Link href="/users">My Account</Nav.Link>
               <Nav.Link href="/recipes">Recipes</Nav.Link>
               <Nav.Link href="/resources">Resources</Nav.Link>

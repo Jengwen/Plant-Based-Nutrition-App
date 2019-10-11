@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import Home from "./home/Home";
 import Auth0Client from "./auth/Auth";
 import Callback from "./auth/Callback";
-import UserCard from "./users/UserCard";
+import UserAccount from "./users/UserAccount";
+import UserReport from "./reports/ReportCard";
 
 
 class ApplicationViews extends Component {
@@ -12,7 +13,7 @@ class ApplicationViews extends Component {
       <React.Fragment>
         <Route
           exact
-          path="/"
+          path="/home"
           render={props => {
             return <Home />;
           }}
@@ -23,7 +24,19 @@ class ApplicationViews extends Component {
           path="/users"
           render={props => {
             // if (Auth0Client.isAuthenticated()) {
-              return <UserCard {...props}  />;
+              return <UserAccount {...props}  />;
+            // } else {
+            //   Auth0Client.signIn();
+            //   return null;
+            }
+          }
+          />
+          <Route
+          exact
+          path="/reports"
+          render={props => {
+            // if (Auth0Client.isAuthenticated()) {
+              return <UserReport {...props}  />;
             // } else {
             //   Auth0Client.signIn();
             //   return null;

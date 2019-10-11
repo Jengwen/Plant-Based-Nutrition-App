@@ -1,0 +1,9 @@
+Form {
+width: 50vw
+}
+#report-btn.btn.btn-light {
+   margin: 1em;
+}
+#user-account {
+margin-left: 20em
+}

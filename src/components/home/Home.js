@@ -7,9 +7,9 @@ class Home extends Component {
   render() {
     return (
 <>
+<section id="login">
 <h1 id= "main-heading">Considering a Plant Based Diet?</h1>
 <h2 id= "second-heading">How Do I Know What to Eat?</h2>
-<section id="login">
     <p>Create an account to get a personalized nutrition report, recipes, and more.</p>
  <Button  id="register"
             variant="light"

@@ -48,7 +48,7 @@ class Callback extends Component {
           sessionStorage.setItem("credentials", matchingUser[0].id);
         }
       });
-    this.props.history.replace("/");
+    this.props.history.replace("/users");
   }
 
   render() {
