@@ -1,6 +1,9 @@
+import { userInfo } from "os"
+
 export default {
     getCaloriesM (){
-        return 
+        if(user.female === false){
+        return (662-user.age)}
     },
     getCaloriesF (){
         return

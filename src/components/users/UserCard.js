@@ -1,27 +1,15 @@
 import React, { Component } from "react";
-import { Form, Button } from "react-bootstrap";
-import UserMgr from '../../modules/UserMgr'
+import { Form} from "react-bootstrap";
 
 class UserCard extends Component {
+  // update state upon field change as user types
+  handleFieldChange = evt => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = evt.target.value;
+    this.setState(stateToChange);
+  };
 
-  componentDidMount() {
-    UserMgr.getOne().then(user => {
-      console.log(user);
-      this.setState({
-        name: user.name,
-        email: user.email,
-        female: user.female,
-        age: user.age,
-        height: user.height,
-        weight: user.weight,
-        activityLevel: user.activityLevel
-      });
-      console.log(user.name);
-    });
-  }
-
-  // return calculated results from input form and render report with graph
-
+// render the user information for the logged in user and edit form
   render() {
     return (
       <>
@@ -29,18 +17,21 @@ class UserCard extends Component {
           <Form.Group controlId="name">
             <Form.Label>Name</Form.Label>
             <Form.Control type="text"
-            // value= {this.state.name}
+            value= {this.props.userProp.name}
             onChange={this.handleFieldChange}
              />
           </Form.Group>
           <Form.Group controlId="email">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" onChange={this.handleFieldChange} />
+            <Form.Control type="email"
+            value= {this.props.userProp.email}
+             onChange={this.handleFieldChange} />
           </Form.Group>
           <Form.Group controlId="height">
             <Form.Label>Height</Form.Label>
             <Form.Control
               type="text"
+              value= {this.props.userProp.height}
               onChange={this.handleFieldChange}
             />
           </Form.Group>
@@ -49,7 +40,7 @@ class UserCard extends Component {
             <Form.Control
               type="text"
               onChange={this.handleFieldChange}
-              placeholder="Enter weight"
+              value={this.props.userProp.weight}
             />
           </Form.Group>
           <Form.Group controlId="age">
@@ -57,7 +48,7 @@ class UserCard extends Component {
             <Form.Control
               type="text"
               onChange={this.handleFieldChange}
-              placeholder="Enter age"
+              value="Enter age"
             />
           </Form.Group>
         </Form>

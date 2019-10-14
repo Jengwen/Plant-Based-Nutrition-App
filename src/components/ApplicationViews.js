@@ -21,7 +21,7 @@ class ApplicationViews extends Component {
         <Route exact path="/callback" component={Callback} />
         <Route
           exact
-          path="/users"
+          path="/users/:id"
           render={props => {
             // if (Auth0Client.isAuthenticated()) {
               return <UserAccount {...props}  />;

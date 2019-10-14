@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002"
 
 export default {
   // bring back one user's account information
-  getOne(id) {
+  getOne() {
     return fetch(`${remoteURL}/users/${sessionStorage.getItem('credentials')}`).then(result => result.json())
   },
     //  send user detail updated information to json

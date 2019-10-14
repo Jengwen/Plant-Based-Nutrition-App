@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./Report.css"
 class UserReport extends Component {
+// call calculator methods
 // return calculated results from input form and render report with graph
-
 render (){
 return (
     <>
