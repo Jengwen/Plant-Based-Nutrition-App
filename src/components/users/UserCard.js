@@ -19,28 +19,32 @@ class UserCard extends Component {
       console.log(user.name);
     });
   }
+
   // return calculated results from input form and render report with graph
 
   render() {
     return (
       <>
         <Form>
-          <Form.Group controlId="formBasicText">
+          <Form.Group controlId="name">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" onChange={this.handleFieldChange} />
+            <Form.Control type="text"
+            // value= {this.state.name}
+            onChange={this.handleFieldChange}
+             />
           </Form.Group>
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="email">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" onChange={this.handleFieldChange} />
           </Form.Group>
-          <Form.Group controlId="formBasicText">
+          <Form.Group controlId="height">
             <Form.Label>Height</Form.Label>
             <Form.Control
               type="text"
               onChange={this.handleFieldChange}
             />
           </Form.Group>
-          <Form.Group controlId="formBasicText">
+          <Form.Group controlId="weight">
             <Form.Label>Weight</Form.Label>
             <Form.Control
               type="text"
@@ -48,7 +52,7 @@ class UserCard extends Component {
               placeholder="Enter weight"
             />
           </Form.Group>
-          <Form.Group controlId="formBasicText">
+          <Form.Group controlId="age">
             <Form.Label>Age</Form.Label>
             <Form.Control
               type="text"

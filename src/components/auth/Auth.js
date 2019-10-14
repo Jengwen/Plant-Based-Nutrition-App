@@ -59,7 +59,7 @@ class Auth {
 
   signOut() {
     this.auth0.logout({
-      returnTo: 'http://localhost:3000',
+      returnTo: 'http://localhost:3000/home',
       clientID: AuthConfig.clientId,
     });
   }
