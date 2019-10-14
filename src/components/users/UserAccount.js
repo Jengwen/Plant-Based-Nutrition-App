@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import UserMgr from "../../modules/UserMgr";
 import "./User.css";
 import UserCard from "../users/UserCard";
+import {Button} from "react-bootstrap"
 
 class UserAccount extends Component {
   state = {
@@ -41,21 +42,8 @@ class UserAccount extends Component {
     // update JSON with API put and redirect to user account page
     UserMgr.update(editedUser).then(() => this.props.history.push("/users"));
   };
-  componentDidMount() {
-    UserMgr.getOne(this.props.match.params.id).then(user => {
-      console.log(user);
-      this.setState({
-        name: user.name,
-        email: user.email,
-        female: user.female,
-        age: user.age,
-        height: user.height,
-        weight: user.weight,
-        activityLevel: user.activityLevel
-      });
-      console.log(user.name);
-    });
-  }
+
+
 
   render() {
     return (
@@ -63,8 +51,21 @@ class UserAccount extends Component {
         {/* return form to edit personal input items to recalculate report */}
         <section id="user-account">
          <UserCard
-                // key={user.id} userProp={user}{...this.props}
                 />
+                          {/* button to save edited information in the json */}
+          <Button
+            variant="light"
+            type="submit"
+            onClick={this.updateExistingUser}
+          >
+            Save Edit
+          </Button>
+
+                        {/* button to see personalized report upon click */}
+        <Button id="report-btn" variant="light" type="submit">
+          See Report
+        </Button>
+
         </section>
       </>
     );

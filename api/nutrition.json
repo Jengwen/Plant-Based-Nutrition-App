@@ -3,7 +3,8 @@
     {
       "aud": "auth0|5d9df000fb75430e1b802ecb",
       "name": "avery",
-      "id": 1
+      "id": 1,
+      "height": 61
     }
   ],
   "recipes": [],
