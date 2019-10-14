@@ -23,7 +23,7 @@ class UserCard extends Component {
           </Form.Group>
           <Form.Group controlId="email">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email"
+            <Form.Control type="text"
             value= {this.props.userProp.email}
              onChange={this.handleFieldChange} />
           </Form.Group>
@@ -48,9 +48,10 @@ class UserCard extends Component {
             <Form.Control
               type="text"
               onChange={this.handleFieldChange}
-              value="Enter age"
+              value={this.props.userProp.age}
             />
           </Form.Group>
+
         </Form>
       </>
     );

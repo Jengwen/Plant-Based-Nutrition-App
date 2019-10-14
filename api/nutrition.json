@@ -1,14 +1,18 @@
 {
   "users": [
-        {
+    {
       "aud": "auth0|5da48280b83c450d4b2c0910",
       "name": "bob",
       "id": 2
     },
     {
       "aud": "auth0|5d9df000fb75430e1b802ecb",
-      "name": "avery",
-      "id": 3
+      "id": 3,
+      "name": "Avery",
+      "email": "avery@avery.com",
+      "age": 15,
+      "height": 61,
+      "weight": 100
     }
   ],
   "recipes": [],
