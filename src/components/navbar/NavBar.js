@@ -34,16 +34,15 @@ class NavBar extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              {/* <label>{auth0Client.getProfile().name}</label> */}
               <Button
                 id="new-event"
                 variant="light"
-                size="lg"
+                size="md"
                 onClick={this.signOut}
               >
                 Sign Out
               </Button>
-              <Nav.Link href="/users">My Account</Nav.Link>
+              <Nav.Link href="/users/:id">My Account</Nav.Link>
               <Nav.Link href="/recipes">Recipes</Nav.Link>
               <Nav.Link href="/resources">Resources</Nav.Link>
             </Nav>

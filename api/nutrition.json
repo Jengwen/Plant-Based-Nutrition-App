@@ -2,17 +2,25 @@
   "users": [
     {
       "aud": "auth0|5da48280b83c450d4b2c0910",
-      "name": "bob",
-      "id": 2
+      "id": 2,
+      "name": "Bobb",
+      "email": "bob@bob.com",
+      "gender": "female",
+      "age": 466,
+      "height": 722,
+      "weight": 1900,
+      "activityLevelId": "2"
     },
     {
       "aud": "auth0|5d9df000fb75430e1b802ecb",
       "id": 3,
-      "name": "Avery",
+      "name": "Avery Elaine",
       "email": "avery@avery.com",
+      "gender": "female",
       "age": 15,
       "height": 61,
-      "weight": 100
+      "weight": 100,
+      "activityLevelId": "3"
     }
   ],
   "recipes": [],
@@ -58,7 +66,7 @@
     },
     {
       "id": 2,
-      "name": "Low Active"
+      "name": "Moderately Active"
     },
     {
       "id": 3,
