@@ -11,3 +11,20 @@
      font-family: Cabin;
      color:#82846d;
  }
+ #protein-heading {
+     font-family: Cabin;
+     color: #82846d;
+ }
+ #report-results {
+     display: flex;
+     margin-left:5em;
+     margin-top: 3em;
+     flex-direction: column;
+ }
+ #macro {
+     margin-left: 3em;
+ }
+
+ p {
+     font-size: 20px;
+ }

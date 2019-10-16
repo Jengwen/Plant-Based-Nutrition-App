@@ -4,7 +4,7 @@ import "./NavBar.css";
 import auth0Client from "../auth/Auth";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../logo.png"
+import logo from "./logo.png"
 
 class NavBar extends Component {
   signOut = () => {
@@ -16,7 +16,7 @@ class NavBar extends Component {
   render() {
     return (
       <header>
-        <img src="src/logo.png" alt="leaf logo"/>
+        <img id="logo" src={logo} alt="leaf logo"/>
         <h1 className="site-title">
           Personalized Plant Based Nutrition
           <br />

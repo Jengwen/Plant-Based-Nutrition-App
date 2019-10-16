@@ -8,8 +8,8 @@
       "gender": "male",
       "age": 46,
       "height": 72,
-      "weight": 190,
-      "activitylevelId": "2"
+      "weight": 195,
+      "activitylevelId": 2
     },
     {
       "aud": "auth0|5d9df000fb75430e1b802ecb",
@@ -20,7 +20,7 @@
       "age": 15,
       "height": 61,
       "weight": 100,
-      "activitylevelId": "3"
+      "activitylevelId": 3
     }
   ],
   "recipes": [],

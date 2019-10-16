@@ -12,8 +12,8 @@ class UserAccount extends Component {
     height: "",
     gender: "",
     age: "",
-    activityLevelId: "",
-    activityLevels: [],
+    activitylevelId: "",
+    activitylevels: [],
     loadingStatus: true,
     user: {}
   };
@@ -39,7 +39,7 @@ class UserAccount extends Component {
       age: Number(this.state.age),
       height: Number(this.state.height),
       weight: Number(this.state.weight),
-      activityLevelId: this.state.activityLevelId
+      activitylevelId: Number(this.state.activitylevelId)
     };
     // update JSON with API put and redirect to user account page
     UserMgr.update(editedUser).then(() =>
@@ -58,7 +58,7 @@ class UserAccount extends Component {
         height: user.height,
         gender: user.gender,
         age: user.age,
-        activityLevelId: user.activityLevelId,
+        activitylevelId: user.activitylevelId,
         user: user
       });
       console.log(user.name);
@@ -67,7 +67,7 @@ class UserAccount extends Component {
     ActivityMgr.getAll().then(levels =>{
       console.log(levels);
       this.setState({
-        activityLevels: levels
+        activitylevels: levels
       })
     });
   }
@@ -129,14 +129,14 @@ class UserAccount extends Component {
                 <option >female</option>
               </select>
             </Form.Group>
-            <Form.Group controlId="activityLevelId">
+            <Form.Group controlId="activitylevelId">
               <Form.Label>Activity Level</Form.Label>
               <select
-                id="activityLevelId"
-                value={this.state.activityLevelId}
+                id="activitylevelId"
+                value={this.state.activitylevelId}
                 onChange={this.handleFieldChange}
               >
-                {this.state.activityLevels.map(levels => (
+                {this.state.activitylevels.map(levels => (
                   <option key={levels.id} value={levels.id}>
                     {levels.name}
                   </option>
