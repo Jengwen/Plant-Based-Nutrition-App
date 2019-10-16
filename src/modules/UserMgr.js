@@ -5,6 +5,10 @@ export default {
   getOne() {
     return fetch(`${remoteURL}/users/${sessionStorage.getItem('credentials')}`).then(result => result.json())
   },
+  // bring back embedded user information with their activity level
+  getOneActive() {
+    return fetch(`${remoteURL}/users/${sessionStorage.getItem('credentials')}/?_embed=activitylevels}`).then(parsedUser => parsedUser.json())
+  },
     //  send user detail updated information to json
   update(editedUser) {
     return fetch(`${remoteURL}/users/${editedUser.id}`, {

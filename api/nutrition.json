@@ -3,13 +3,13 @@
     {
       "aud": "auth0|5da48280b83c450d4b2c0910",
       "id": 2,
-      "name": "Bobb",
+      "name": "Bob",
       "email": "bob@bob.com",
-      "gender": "female",
-      "age": 466,
-      "height": 722,
-      "weight": 1900,
-      "activityLevelId": "2"
+      "gender": "male",
+      "age": 46,
+      "height": 72,
+      "weight": 190,
+      "activitylevelId": "2"
     },
     {
       "aud": "auth0|5d9df000fb75430e1b802ecb",
@@ -20,7 +20,7 @@
       "age": 15,
       "height": 61,
       "weight": 100,
-      "activityLevelId": "3"
+      "activitylevelId": "3"
     }
   ],
   "recipes": [],
@@ -62,19 +62,27 @@
   "activitylevels": [
     {
       "id": 1,
-      "name": "Sedentary"
+      "name": "Sedentary",
+      "mvalue": 1,
+      "fvalue": 1
     },
     {
       "id": 2,
-      "name": "Moderately Active"
+      "name": "Moderately Active",
+      "mvalue": 1.11,
+      "fvalue": 1.12
     },
     {
       "id": 3,
-      "name": "Active"
+      "name": "Active",
+      "mvalue": 1.26,
+      "fvalue": 1.27
     },
     {
       "id": 4,
-      "name": "Very Active"
+      "name": "Very Active",
+      "mvalue": 1.48,
+      "fvalue": 1.45
     }
   ]
 }

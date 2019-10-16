@@ -4,7 +4,7 @@ import Home from "./home/Home";
 import Auth0Client from "./auth/Auth";
 import Callback from "./auth/Callback";
 import UserAccount from "./users/UserAccount";
-import UserReport from "./reports/ReportCard";
+import Calculator from "./reports/Calculator";
 
 
 class ApplicationViews extends Component {
@@ -14,6 +14,13 @@ class ApplicationViews extends Component {
         <Route
           exact
           path="/home"
+          render={props => {
+            return <Home />;
+          }}
+        />
+        <Route
+          exact
+          path="/"
           render={props => {
             return <Home />;
           }}
@@ -36,7 +43,7 @@ class ApplicationViews extends Component {
           path="/reports"
           render={props => {
             // if (Auth0Client.isAuthenticated()) {
-              return <UserReport {...props}  />;
+              return <Calculator {...props}  />;
             // } else {
             //   Auth0Client.signIn();
             //   return null;

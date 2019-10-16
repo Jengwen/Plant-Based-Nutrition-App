@@ -43,7 +43,7 @@ class UserAccount extends Component {
     };
     // update JSON with API put and redirect to user account page
     UserMgr.update(editedUser).then(() =>
-      this.props.history.push(`/users/${editedUser.id}`)
+      this.props.history.push(`/reports`)
     );
   };
   /* call session storage user and render user card */
@@ -64,11 +64,12 @@ class UserAccount extends Component {
       console.log(user.name);
     });
     // get all of the activity levels in an array to map for their id
-    ActivityMgr.getAll().then(levels =>
+    ActivityMgr.getAll().then(levels =>{
+      console.log(levels);
       this.setState({
         activityLevels: levels
       })
-    );
+    });
   }
 
   render() {
@@ -76,7 +77,8 @@ class UserAccount extends Component {
       <>
         {/* return form to edit personal input items to recalculate report */}
         <section id="user-account">
-          {/* render form to view and edit user account */}
+          <h3 id= "user-dashboard-header">Update Your Info to Calculate Your Nutrition Needs</h3>
+          {/* render form to view and edit user account input values for report calculations*/}
           <Form>
             <Form.Group controlId="name">
               <Form.Label>Name</Form.Label>
@@ -142,20 +144,16 @@ class UserAccount extends Component {
               </select>
             </Form.Group>
           </Form>
-          {/* button to save edited information in the json */}
+          {/* button to save edited information in the json and  redirect to the calculator and then user's report */}
           <Button
             variant="light"
             type="submit"
+            size= "lg"
             onClick={this.updateExistingUser}
           >
-            Save Edit
-          </Button>
-
-          {/* button to see personalized report upon click */}
-          <Button id="report-btn" variant="light" type="submit">
             See Report
           </Button>
-        </section>
+       </section>
       </>
     );
   }
