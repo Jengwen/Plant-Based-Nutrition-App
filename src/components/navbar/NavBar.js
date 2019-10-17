@@ -24,12 +24,6 @@ class NavBar extends Component {
         </h1>
         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/home">
-         {/* <img
-        src="logo.png"
-        width="30"
-        height="30"
-        className="d-inline-block align-top"
-        alt="leaf logo"/> */}
         </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

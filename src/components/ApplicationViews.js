@@ -5,6 +5,10 @@ import Auth0Client from "./auth/Auth";
 import Callback from "./auth/Callback";
 import UserAccount from "./users/UserAccount";
 import Calculator from "./reports/Calculator";
+import RecipeCard from "./recipes/RecipeCard";
+import RecipeList from "./recipes/RecipeList";
+import RecipeForm from "./recipes/RecipeForm";
+import ResourceList from "./resources/ResourceList"
 
 
 class ApplicationViews extends Component {
@@ -49,6 +53,55 @@ class ApplicationViews extends Component {
             //   return null;
             }
           }
+        />
+                <Route
+          exact
+          path="/recipes"
+          render={props => {
+            // if (Auth0Client.isAuthenticated()) {
+              return <RecipeList {...props}  />;
+            // } else {
+            //   Auth0Client.signIn();
+            //   return null;
+            // }
+          }}
+        />
+        <Route
+          path="/recipes/:recipeId(\d+)"
+          render={props => {
+            // Pass the recipeId to the Recipe Card
+            if (Auth0Client.isAuthenticated()) {
+              return <RecipeCard
+                {...props}
+                recipeId={parseInt(props.match.params.recipeId)}
+              />             } else {
+                Auth0Client.signIn();
+                return null;
+              }
+          }}
+        />
+ <Route
+          path="/recipes/new"
+          render={props => {
+            // if (Auth0Client.isAuthenticated()) {
+              return <RecipeForm {...props}  />;
+            // } else {
+            //   Auth0Client.signIn();
+            //   return null;
+            // }
+          }}
+        />
+         <Route
+          exact
+          path="/resources"
+          render={props => {
+            // if (Auth0Client.isAuthenticated()) {
+              return <ResourceList {...props}  />;
+            // } else {
+            //   Auth0Client.signIn();
+            //   return null;
+            // }
+          }}
         />
       </React.Fragment>
     );

@@ -23,39 +23,53 @@
       "activitylevelId": 3
     }
   ],
-  "recipes": [],
+  "recipes": [
+    {
+      "title": "Broccoli Soup",
+      "url": "http://whiteplateblankslate.com/vegan-broccoli-soup/",
+      "id": 1
+    }
+  ],
   "nutrients": [
     {
       "id": 1,
-      "name": "Protein"
+      "value": "Protein",
+      "label": "Protein"
     },
     {
       "id": 2,
-      "name": "Fat"
+      "value": "Fat",
+      "label": "Fat"
     },
     {
       "id": 3,
-      "name": "Carbohydrates"
+      "value": "Carbohydrates",
+      "label": "Carbohydrates"
     },
     {
       "id": 4,
-      "name": "Fiber"
+      "value": "Fiber",
+      "label": "Fiber"
     },
     {
       "id": 5,
-      "name": "Iron"
+      "value": "Iron",
+      "label": "Iron"
     },
     {
       "id": 6,
-      "name": "Calcium"
+      "value": "Calcium",
+      "label": "Calcium"
     },
     {
       "id": 7,
-      "name": "Potassium"
+      "label": "Potassium",
+      "value": "Potassium"
     },
     {
       "id": 8,
-      "name": "Vitamin D"
+      "value": "Vitamin D",
+      "label": "Vitamin D"
     }
   ],
   "recipenutrients": [],

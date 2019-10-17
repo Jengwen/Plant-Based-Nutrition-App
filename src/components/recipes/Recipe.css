@@ -1,0 +1,23 @@
+
+#create-btn{
+    align-content: center;
+    margin: 1.5em;
+}
+.card{
+    width: 50vw;
+}
+.container-cards{
+    margin-left: 10em;
+}
+#recipe-input-header{
+    font-family: Cabin;
+    color: #82846d;
+    text-align: center;
+    margin: 1em
+}
+#recipe-form{
+    margin-left: 10em;
+}
+#save-recipe-btn{
+    margin: 1.5em
+}
