@@ -7,7 +7,13 @@ class Calculator extends Component {
     calories: "",
     protein: "",
     fat: "",
-    carbohydrates: ""
+    carbohydrates: "",
+    calcium: "",
+    iron: "",
+    niacin: "",
+    vitaminC: "",
+    vitaminB6: "",
+    fiber: ""
   };
   // make calculations occur for calories here:
   componentDidMount() {
@@ -37,9 +43,31 @@ class Calculator extends Component {
       this.setState({
         carbohydrates: carbohydrates.toFixed(0)
       });
+      const calcium = CalculationMethods.getCalcium(user.gender,user.age);
+      this.setState({
+        calcium: calcium
     });
-  }
-
+    const iron = CalculationMethods.getIron(user.gender,user.age);
+    this.setState({
+      iron: iron
+    });
+    const niacin = CalculationMethods.getNiacin(user.gender);
+    this.setState({
+      niacin: niacin
+    });
+    const vitaminC = CalculationMethods.getVitaminC(user.gender);
+    this.setState({
+      vitaminC: vitaminC
+    });
+    const B6 = CalculationMethods.getB6(user.gender,user.age);
+    this.setState({
+      B6: B6
+    });
+    const fiber = CalculationMethods.getFiber(user.gender,user.age);
+    this.setState({
+      fiber: fiber
+    });
+  })}
   // render report calculations of calories and macronutrients
   render() {
     return (
@@ -49,7 +77,14 @@ class Calculator extends Component {
         <UserReport calorieProp={this.state.calories}
         proteinProp ={this.state.protein}
         carbProp= {this.state.carbohydrates}
-        fatProp= {this.state.fat}{...this.props}/>
+        fatProp= {this.state.fat}{...this.props}
+        calciumProp = {this.state.calcium}{...this.props}
+        ironProp = {this.state.iron}{...this.props}
+        niacinProp= {this.state.niacin}{...this.props}
+        vitaminCProp= {this.state.vitaminC}{...this.props}
+        vitaminB6Prop= {this.state.B6}{...this.props}
+        fiberProp= {this.state.fiber}{...this.props}
+        />
       </>
     );
   }

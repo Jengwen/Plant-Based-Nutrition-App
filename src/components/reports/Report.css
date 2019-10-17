@@ -11,6 +11,10 @@
      font-family: Cabin;
      color:#82846d;
  }
+ #micro-header {
+    font-family: Cabin;
+    color:#82846d;
+}
  #protein-heading {
      font-family: Cabin;
      color: #82846d;
@@ -24,7 +28,12 @@
  #macro {
      margin-left: 3em;
  }
-
+ #micro {
+    margin-left: 15em;
+}
+#micro-details{
+    margin-left: 3em;
+}
  p {
      font-size: 20px;
  }

@@ -28,7 +28,18 @@ return (
 
     </div>
     <div id="micro">
-
+    <h3 id="micro-header">Micronutrients:</h3>
+<div id="micro-details">
+<p>Calcium: {this.props.calciumProp} grams</p>
+<p>Fiber: {this.props.fiberProp} grams</p>
+<p>Iron: {this.props.ironProp} grams</p>
+<p>Potassium: 4700 grams</p>
+<p>Vitamin D: 600 grams</p>
+<p>Vitamin C: {this.props.vitaminCProp}</p>
+<p>Niacin: {this.props.niacinProp}</p>
+<p>B6: {this.props.vitaminB6Prop}</p>
+<p>B12: 2.4</p>
+</div>
     </div>
 </section>
     </>
