@@ -21,12 +21,28 @@
       "height": 61,
       "weight": 100,
       "activitylevelId": 3
+    },
+    {
+      "aud": "auth0|5da9c9fad5646a0e18ef86a7",
+      "id": 4,
+      "name": "Judy",
+      "email": "judy@judy.com",
+      "gender": "female",
+      "age": 52,
+      "height": 65,
+      "weight": 145,
+      "activitylevelId": 4
+    },
+    {
+      "aud": "auth0|5da9ccf17325d80e29ce8455",
+      "name": "nathan",
+      "id": 5
     }
   ],
   "recipes": [
     {
-      "title": "Broccoli Soup",
-      "url": "http://whiteplateblankslate.com/vegan-broccoli-soup/",
+      "title": "Hummus",
+      "url": "https://elavegan.com/pumpkin-pasta-bake/",
       "id": 1
     }
   ],
@@ -72,7 +88,18 @@
       "label": "Vitamin D"
     }
   ],
-  "recipenutrients": [],
+  "recipe_nutrients": [
+    {
+      "recipeId": 1,
+      "nutrientId": 6,
+      "id": 1
+    },
+    {
+      "recipeId": 1,
+      "nutrientId": 4,
+      "id": 2
+    }
+  ],
   "activitylevels": [
     {
       "id": 1,

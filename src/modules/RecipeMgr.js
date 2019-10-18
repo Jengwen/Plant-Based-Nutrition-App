@@ -19,6 +19,16 @@ post(newRecipe) {
         body: JSON.stringify(newRecipe)
     }).then(data => data.json())
 },
+// method to post recipe-nutrients for a recipe
+postNutrients(nutrientRecipe){
+  return fetch(`${remoteURL}/recipe_nutrients`,{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+  },
+  body: JSON.stringify(nutrientRecipe)
+  }).then(data => data.json)
+},
 // delete a recipe from JSON
 delete(id) {
     return fetch(`${remoteURL}/recipes/${id}`, {

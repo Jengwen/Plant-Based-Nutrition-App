@@ -22,7 +22,7 @@ class RecipeCard extends Component {
             Title:{" "}
             <span className="card-recipe">{this.props.recipeProp.title}</span>
           </h3>
-          <Microlink url={this.props.recipeProp.url} size="large" />
+          <Microlink url={this.props.recipeProp.url} size="normal"/>
           {/* add delete button */}
           <Button
             variant="light"

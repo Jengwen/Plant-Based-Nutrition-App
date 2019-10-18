@@ -28,6 +28,8 @@ class Auth {
   }
 
   isAuthenticated() {
+    console.log("is authenticated", new Date().getTime(), this.expiresAt)
+    debugger;
     return new Date().getTime() < this.expiresAt;
   }
 

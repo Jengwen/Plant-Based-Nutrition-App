@@ -8,7 +8,8 @@ class RecipeForm extends Component {
   state = {
     title: "",
     url: "",
-    nutrients: []
+    nutrients: [],
+    selectValues: []
   };
 
   handleFieldChange = evt => {
@@ -16,6 +17,11 @@ class RecipeForm extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
+
+  _onChange(value) {
+    //console.log(value) - just to see what we recive from <Select />
+    this.setState({selectValues: value});
+  }
   // method to construct new recipe
   constructNewRecipe = evt => {
     evt.preventDefault();
@@ -25,30 +31,43 @@ class RecipeForm extends Component {
       this.setState({ loadingStatus: true });
       const recipe = {
         title: this.state.title,
-        url: this.state.url,
-        // nutrients: this.state.recipenutrients.id
+        url: this.state.url
       };
       // Create the recipe and redirect user to recipe list
-      RecipeMgr.post(recipe).then(() => this.props.history.push("/recipes"));
+      RecipeMgr.post(recipe).then(postedRecipe => {
+        // for loop to loop through nutrients array and create and post
+        // a recipe-nutrient object and post to join table in json
+        for (var i = 0; i < this.state.selectValues.length; i++) {
+          const recipeNutrient = {
+            recipeId: postedRecipe.id,
+            nutrientId: this.state.selectValues[i].id
+          };
+          // create the recipe_nutrient and redirect to recipes
+          RecipeMgr.postNutrients(recipeNutrient).then(() =>
+            this.props.history.push("/recipes")
+          );
+        }
+      });
     }
   };
   componentDidMount() {
     console.log("recipe form, component did mount");
-    NutrientMgr.getAllNutrients().then(nutrients =>
-      {this.setState({
+    NutrientMgr.getAllNutrients().then(nutrients => {
+      this.setState({
         nutrients: nutrients
-      })
-      console.log(nutrients)
-      })
+      });
+      console.log(nutrients);
+    });
   }
 
   render() {
-        // create selection dropdown form for nutrients
+    // create selection dropdown form for nutrients
     const nutrientSelect = () => (
       <Select
+      onChange={this._onChange.bind(this)}
         options={this.state.nutrients}
         isMulti
-        name="colors"
+        name="nutrientSelect"
         className="basic-multi-select"
         classNamePrefix="select"
       />
@@ -56,9 +75,7 @@ class RecipeForm extends Component {
     return (
       <>
         <section id="recipe-input">
-          <h3 id="recipe-input-header">
-           Link and Save Your Favorite Recipes
-          </h3>
+          <h3 id="recipe-input-header">Link and Save Your Favorite Recipes</h3>
           {/* render form to create recipe input */}
           <Form id="recipe-form">
             <Form.Group controlId="title">
@@ -74,7 +91,7 @@ class RecipeForm extends Component {
           </Form>
           {/* button to save recipe to the json and  redirect to recipe list*/}
           <Button
-          id="save-recipe-btn"
+            id="save-recipe-btn"
             variant="light"
             type="submit"
             size="lg"
