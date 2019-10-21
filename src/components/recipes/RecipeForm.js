@@ -8,6 +8,7 @@ class RecipeForm extends Component {
   state = {
     title: "",
     url: "",
+    userId: "",
     nutrients: [],
     selectValues: []
   };
@@ -31,7 +32,8 @@ class RecipeForm extends Component {
       this.setState({ loadingStatus: true });
       const recipe = {
         title: this.state.title,
-        url: this.state.url
+        url: this.state.url,
+        // userId: this.props.userProp.id
       };
       // Create the recipe and redirect user to recipe list
       RecipeMgr.post(recipe).then(postedRecipe => {
@@ -43,7 +45,8 @@ class RecipeForm extends Component {
             nutrientId: this.state.selectValues[i].id
           };
           // create the recipe_nutrient and redirect to recipes
-          RecipeMgr.postNutrients(recipeNutrient).then(() =>
+          RecipeMgr.postNutrients(recipeNutrient)
+          .then(() =>
             this.props.history.push("/recipes")
           );
         }

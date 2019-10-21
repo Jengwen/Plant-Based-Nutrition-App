@@ -15,12 +15,11 @@ class NavBar extends Component {
 
   render() {
     return (
-      <header>
-        <img id="logo" src={logo} alt="leaf logo"/>
-        <h1 className="site-title">
+      <header className= "media">
+        <div className=" media-left">
+        <img id="logo" src={logo} alt="leaf logo" className="media-object"/></div>
+        <div className= "media-body"><h1 className="media-heading">
           Personalized Plant Based Nutrition
-          <br />
-          <small></small>
         </h1>
         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/home">
@@ -42,6 +41,7 @@ class NavBar extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+        </div>
       </header>
     );
   }

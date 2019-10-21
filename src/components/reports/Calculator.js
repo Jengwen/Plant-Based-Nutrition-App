@@ -85,7 +85,7 @@ class Calculator extends Component {
         vitaminB6Prop= {this.state.B6}{...this.props}
         fiberProp= {this.state.fiber}{...this.props}
         />
-      </>
+              </>
     );
   }
 }

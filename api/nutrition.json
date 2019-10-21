@@ -34,9 +34,15 @@
       "activitylevelId": 4
     },
     {
-      "aud": "auth0|5da9ccf17325d80e29ce8455",
-      "name": "nathan",
-      "id": 5
+      "aud": "auth0|5dadb3407dacdb0f2621b619",
+      "id": 6,
+      "name": "Big Mike",
+      "email": "bigmike@mike.com",
+      "gender": "male",
+      "age": 52,
+      "height": 66,
+      "weight": 300,
+      "activitylevelId": 2
     }
   ],
   "recipes": [
@@ -54,6 +60,11 @@
       "title": "Pasta Vodka",
       "url": "https://ericasrecipes.com/vegan-pasta-alla-vodka/",
       "id": 3
+    },
+    {
+      "title": "Lemon Chickpea Rice",
+      "url": "https://crumbsandcaramel.com/one-skillet-baked-greek-lemon-chickpeas-and-rice/",
+      "id": 4
     }
   ],
   "nutrients": [
@@ -128,6 +139,16 @@
       "recipeId": 3,
       "nutrientId": 1,
       "id": 6
+    },
+    {
+      "recipeId": 4,
+      "nutrientId": 4,
+      "id": 7
+    },
+    {
+      "recipeId": 4,
+      "nutrientId": 3,
+      "id": 8
     }
   ],
   "activitylevels": [

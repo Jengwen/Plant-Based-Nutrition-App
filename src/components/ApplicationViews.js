@@ -34,36 +34,30 @@ class ApplicationViews extends Component {
           exact
           path="/users/:id"
           render={props => {
-            // if (Auth0Client.isAuthenticated()) {
+            if (Auth0Client.isAuthenticated()) {
               return <UserAccount {...props}  />;
-            // } else {
-            //   Auth0Client.signIn();
-            //   return null;
-            }
-          }
-          />
+            } else {
+              Auth0Client.signIn();
+              return null;
+            }}}
+                    />
           <Route
           exact
           path="/reports"
           render={props => {
-            // if (Auth0Client.isAuthenticated()) {
+            if (Auth0Client.isAuthenticated()) {
               return <Calculator {...props}  />;
-            // } else {
-            //   Auth0Client.signIn();
-            //   return null;
+            } else {
+              Auth0Client.signIn();
+              return null;
             }
-          }
+          }}
         />
                 <Route
           exact
           path="/recipes"
           render={props => {
-            // if (Auth0Client.isAuthenticated()) {
               return <RecipeList {...props}  />;
-            // } else {
-            //   Auth0Client.signIn();
-            //   return null;
-            // }
           }}
         />
         <Route
@@ -83,24 +77,19 @@ class ApplicationViews extends Component {
  <Route
           path="/recipes/new"
           render={props => {
-            // if (Auth0Client.isAuthenticated()) {
+            if (Auth0Client.isAuthenticated()) {
               return <RecipeForm {...props}  />;
-            // } else {
-            //   Auth0Client.signIn();
-            //   return null;
-            // }
+            } else {
+              Auth0Client.signIn();
+              return null;
+            }
           }}
         />
          <Route
           exact
           path="/resources"
           render={props => {
-            // if (Auth0Client.isAuthenticated()) {
               return <ResourceList {...props}  />;
-            // } else {
-            //   Auth0Client.signIn();
-            //   return null;
-            // }
           }}
         />
       </React.Fragment>

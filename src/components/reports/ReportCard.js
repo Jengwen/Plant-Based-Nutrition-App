@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Report.css"
+import Graph from "./Graph";
 class UserReport extends Component {
 // return calculated results from input form and render report with graph
 render (){
@@ -25,7 +26,7 @@ return (
     </div>
     </section>
         <div id="pie-chart">
-
+<Graph></Graph>
     </div>
     <div id="micro">
     <h3 id="micro-header">Micronutrients:</h3>

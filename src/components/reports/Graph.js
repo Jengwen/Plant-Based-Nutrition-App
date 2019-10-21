@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Pie } from "react-chartjs-2";
-import UserMgr from "../../modules/UserMgr";
 
 class Graph extends Component {
   constructor(props) {
@@ -23,24 +22,25 @@ class Graph extends Component {
 
   componentDidMount() {
     console.log("Graph: ComponentDidMount");
-    //call getAll from EventManager to bring back all events for a user and hang on to that data; put it in state
-    UserMgr.getOne().then(user => {
-      // map over events and create new object of event names and gross profits
+    // set labels in labelArray
+    const labelArray = ["Protein", "Carbohydrates", "Fat"]
+    // give pie graph data from props from calculations
+    const dataArray = [this.props.proteinProp,100,200]
 
       this.setState({
         graphData: {
           labels: labelArray,
           datasets: [
             {
-              label: "Profits",
-              data: profitArray
+              label: "Macronutrients",
+              data: dataArray
             }
           ],
           backgroundColor: ["rgba(255, 99, 132, 0.6)"]
         }
       });
-    });
-  }
+    };
+
   render() {
     return (
       <div>

@@ -9,6 +9,7 @@ return fetch(`${remoteURL}/recipes`).then(result => result.json())
   getOneRecipe(id) {
     return fetch(`${remoteURL}/recipes/${id}`).then(result => result.json())
   },
+  
 // save a recipe to the json server
 post(newRecipe) {
     return fetch(`${remoteURL}/recipes`, {
