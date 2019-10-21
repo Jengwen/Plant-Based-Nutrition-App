@@ -21,7 +21,7 @@ class RecipeForm extends Component {
 
   _onChange(value) {
     //console.log(value) - just to see what we recive from <Select />
-    this.setState({selectValues: value});
+    this.setState({ selectValues: value });
   }
   // method to construct new recipe
   constructNewRecipe = evt => {
@@ -32,29 +32,35 @@ class RecipeForm extends Component {
       this.setState({ loadingStatus: true });
       const recipe = {
         title: this.state.title,
-        url: this.state.url,
+        url: this.state.url
         // userId: this.props.userProp.id
       };
-      // Create the recipe and redirect user to recipe list
+
+      //post the recipe and bring back recipe Id
       RecipeMgr.post(recipe).then(postedRecipe => {
-        // for loop to loop through nutrients array and create and post
-        // a recipe-nutrient object and post to join table in json
-        for (var i = 0; i < this.state.selectValues.length; i++) {
+        const recipeId = postedRecipe.id;
+        // take selected nutrients array to create and post recipe-nutrient to jon table
+        const selectNutrientArray = this.state.selectValues;
+        // create array of recipe single nutrient objects
+        let newArray = selectNutrientArray.map(singleNutrient => {
+          // build receipNutrient for specific recipe created
           const recipeNutrient = {
-            recipeId: postedRecipe.id,
-            nutrientId: this.state.selectValues[i].id
+            recipeId: recipeId,
+            nutrientId: singleNutrient.id
           };
-          // create the recipe_nutrient and redirect to recipes
-          RecipeMgr.postNutrients(recipeNutrient)
-          .then(() =>
-            this.props.history.push("/recipes")
-          );
-        }
+          // call fetch to post each recipe-nutrient object to json
+          RecipeMgr.postNutrients(recipeNutrient);
+
+        });
+
+        // take the recipe_nutrient objects and redirect to recipes
+        Promise.all(newArray).then(() => this.props.history.push("/recipes"));
       });
     }
   };
   componentDidMount() {
     console.log("recipe form, component did mount");
+    // fetch all possible nutrients to select while creating a recipe and put in array
     NutrientMgr.getAllNutrients().then(nutrients => {
       this.setState({
         nutrients: nutrients
@@ -64,10 +70,10 @@ class RecipeForm extends Component {
   }
 
   render() {
-    // create selection dropdown form for nutrients
+    // create selection dropdown form for nutrients in artay
     const nutrientSelect = () => (
       <Select
-      onChange={this._onChange.bind(this)}
+        onChange={this._onChange.bind(this)}
         options={this.state.nutrients}
         isMulti
         name="nutrientSelect"
@@ -75,6 +81,7 @@ class RecipeForm extends Component {
         classNamePrefix="select"
       />
     );
+    // return form to create a new recipe
     return (
       <>
         <section id="recipe-input">

@@ -84,6 +84,11 @@
       "title": "Lemon Chickpea Rice",
       "url": "https://crumbsandcaramel.com/one-skillet-baked-greek-lemon-chickpeas-and-rice/",
       "id": 4
+    },
+    {
+      "title": "Pumpkin Seed Hummus",
+      "url": "https://crumbsandcaramel.com/roasted-pumpkin-seed-hummus/",
+      "id": 6
     }
   ],
   "nutrients": [
@@ -168,6 +173,41 @@
       "recipeId": 4,
       "nutrientId": 3,
       "id": 8
+    },
+    {
+      "recipeId": 5,
+      "nutrientId": 3,
+      "id": 9
+    },
+    {
+      "recipeId": 5,
+      "nutrientId": 7,
+      "id": 10
+    },
+    {
+      "recipeId": 7,
+      "nutrientId": 4,
+      "id": 11
+    },
+    {
+      "recipeId": 7,
+      "nutrientId": 5,
+      "id": 12
+    },
+    {
+      "recipeId": 8,
+      "nutrientId": 3,
+      "id": 13
+    },
+    {
+      "recipeId": 8,
+      "nutrientId": 1,
+      "id": 14
+    },
+    {
+      "recipeId": 6,
+      "nutrientId": 4,
+      "id": 15
     }
   ],
   "activitylevels": [
