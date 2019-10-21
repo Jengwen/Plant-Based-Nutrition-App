@@ -8,8 +8,8 @@
       "gender": "male",
       "age": 46,
       "height": 72,
-      "weight": 195,
-      "activitylevelId": 2
+      "weight": 185,
+      "activitylevelId": 3
     },
     {
       "aud": "auth0|5d9df000fb75430e1b802ecb",
@@ -41,9 +41,19 @@
   ],
   "recipes": [
     {
-      "title": "Hummus",
+      "title": "Pumpkin Pasta",
       "url": "https://elavegan.com/pumpkin-pasta-bake/",
       "id": 1
+    },
+    {
+      "title": "White Bean Soup",
+      "url": "https://elavegan.com/vegan-white-bean-soup/",
+      "id": 2
+    },
+    {
+      "title": "Pasta Vodka",
+      "url": "https://ericasrecipes.com/vegan-pasta-alla-vodka/",
+      "id": 3
     }
   ],
   "nutrients": [
@@ -91,13 +101,33 @@
   "recipe_nutrients": [
     {
       "recipeId": 1,
-      "nutrientId": 6,
+      "nutrientId": 4,
       "id": 1
     },
     {
       "recipeId": 1,
-      "nutrientId": 4,
+      "nutrientId": 3,
       "id": 2
+    },
+    {
+      "recipeId": 2,
+      "nutrientId": 4,
+      "id": 3
+    },
+    {
+      "recipeId": 2,
+      "nutrientId": 7,
+      "id": 4
+    },
+    {
+      "recipeId": 3,
+      "nutrientId": 3,
+      "id": 5
+    },
+    {
+      "recipeId": 3,
+      "nutrientId": 1,
+      "id": 6
     }
   ],
   "activitylevels": [
