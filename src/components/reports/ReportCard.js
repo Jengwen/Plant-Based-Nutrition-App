@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Report.css"
 import Graph from "./Graph";
+import {Button} from "react-bootstrap"
 class UserReport extends Component {
 // return calculated results from input form and render report with graph
 render (){
@@ -18,6 +19,8 @@ return (
     <div>
         <h4 id= "protein-heading">Protein:</h4>
  <p>{this.props.proteinProp} grams</p>
+<Button
+variant= "light">Click for Protein Recipes</Button>
 <h4 id= "protein-heading">Fats:</h4>
  <p>{this.props.fatProp} grams</p>
 <h4 id= "protein-heading">Carbohydrates:</h4>
@@ -25,9 +28,8 @@ return (
     </div>
     </div>
     </section>
-        <div id="pie-chart">
-<Graph></Graph>
-    </div>
+        {/* <div id="pie-chart">
+    </div> */}
     <div id="micro">
     <h3 id="micro-header">Micronutrients:</h3>
 <div id="micro-details">

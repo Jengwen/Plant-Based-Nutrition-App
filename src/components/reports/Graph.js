@@ -10,7 +10,7 @@ class Graph extends Component {
         datasets: [
           {
             label: "Protein",
-            data: [],
+            data: [this.props.proteinProp, this.props.carbProp, this.props.fatProp],
             backgroundColor: [
 
             ]
@@ -20,26 +20,26 @@ class Graph extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log("Graph: ComponentDidMount");
-    // set labels in labelArray
-    const labelArray = ["Protein", "Carbohydrates", "Fat"]
-    // give pie graph data from props from calculations
-    const dataArray = [this.props.proteinProp,100,200]
+  // componentDidMount() {
+  //   console.log("Graph: ComponentDidMount");
+  //   // set labels in labelArray
+  //   const labelArray = ["Protein", "Carbohydrates", "Fat"]
+  //   // give pie graph data from props from calculations
+  //   // const dataArray = [this.props.proteinProp,100,200]
 
-      this.setState({
-        graphData: {
-          labels: labelArray,
-          datasets: [
-            {
-              label: "Macronutrients",
-              data: dataArray
-            }
-          ],
-          backgroundColor: ["rgba(255, 99, 132, 0.6)"]
-        }
-      });
-    };
+  //     this.setState({
+  //       graphData: {
+  //         labels: labelArray,
+  //         datasets: [
+  //           {
+  //             label: "Macronutrients",
+  //             data: [this.props.proteinProp, this.props.carbProp, this.props.fatProp]
+  //           }
+  //         ],
+  //         backgroundColor: ["rgba(255, 99, 132, 0.6)"]
+  //       }
+  //     });
+  //   };
 
   render() {
     return (

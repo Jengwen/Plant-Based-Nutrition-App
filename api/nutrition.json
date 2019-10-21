@@ -43,6 +43,25 @@
       "height": 66,
       "weight": 300,
       "activitylevelId": 2
+    },
+    {
+      "aud": "auth0|5dadee3eb256c50e25992df8",
+      "name": "joe",
+      "id": 7
+    },
+    {
+      "aud": "auth0|5dadef36baf9a50e2fa5d45f",
+      "name": "bro",
+      "id": 8
+    },
+    {
+      "aud": "auth0|5dadef974e98ec0f2b5a6960",
+      "id": 9,
+      "name": "frank",
+      "age": null,
+      "height": null,
+      "weight": null,
+      "activitylevelId": null
     }
   ],
   "recipes": [

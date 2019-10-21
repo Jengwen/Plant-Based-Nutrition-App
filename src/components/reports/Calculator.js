@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CalculationMethods from "../reports/CalculationMethods";
 import UserMgr from "../../modules/UserMgr";
 import UserReport from "../reports/ReportCard";
+import Graph from "./Graph";
 class Calculator extends Component {
   state = {
     calories: "",
@@ -85,7 +86,12 @@ class Calculator extends Component {
         vitaminB6Prop= {this.state.B6}{...this.props}
         fiberProp= {this.state.fiber}{...this.props}
         />
-              </>
+        <Graph
+        proteinProp ={this.state.protein}
+        carbProp= {this.state.carbohydrates}
+        fatProp= {this.state.fat}{...this.props}
+
+              /></>
     );
   }
 }
