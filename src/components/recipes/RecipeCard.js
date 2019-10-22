@@ -7,12 +7,11 @@ import Microlink from "@microlink/react";
 class RecipeCard extends Component {
   // call method to delete recipe and return refreshed list of recipes
   handleDelete = () => {
-    //invoke the delete function in RecipeMgr and re-direct to the recipe list.
-    this.setState({ loadingStatus: true });
-    RecipeMgr.delete(this.props.recipeProp.id).then(() =>
-      this.props.history.push("/recipes")
-    );
-  };
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    this.setState({loadingStatus: true})
+    RecipeMgr.softDelete(this.props.recipeProp.id)
+    .then(() => this.props.history.push("/recipes"))
+}
 
   render() {
     return (

@@ -38,11 +38,15 @@ class RecipeList extends Component {
         </section>
         <div className="container-cards">
           {this.state.recipes.map(singleRecipe => (
+             !singleRecipe.archived ?(
             <RecipeCard
               key={singleRecipe.id}
               recipeProp={singleRecipe}
               {...this.props}
             />
+            ) : (
+              null
+            )
           ))}
         </div>
       </>

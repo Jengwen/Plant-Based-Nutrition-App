@@ -32,7 +32,8 @@ class RecipeForm extends Component {
       this.setState({ loadingStatus: true });
       const recipe = {
         title: this.state.title,
-        url: this.state.url
+        url: this.state.url,
+        archived: false
         // userId: this.props.userProp.id
       };
 

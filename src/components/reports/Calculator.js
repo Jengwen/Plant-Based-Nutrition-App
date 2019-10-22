@@ -87,7 +87,7 @@ class Calculator extends Component {
         fiberProp= {this.state.fiber}{...this.props}
         />
         <Graph
-        proteinProp ={this.state.protein}
+         proteinProp ={this.state.protein}
         carbProp= {this.state.carbohydrates}
         fatProp= {this.state.fat}{...this.props}
 
