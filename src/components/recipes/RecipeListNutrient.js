@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import RecipeCard from "./RecipeCard";
+import NutrientRecipeCard from "./NutrientRecipeCard";
 import NutrientMgr from "../../modules/NutrientMgr";
 import "./Recipe.css"
 
@@ -10,26 +10,33 @@ class RecipeNutrientList extends Component {
   };
 
   componentDidMount() {
-    console.log("Recipe by NutrientLIST: ComponentDidMount");
+    console.log("Recipe by NutrientLIST: ComponentDidMount")
+    console.log("this nutrient",this.props.nutrientId );
     //getAll recipes from Recipe Manager with a specific nutrient id and hang on to that data; put it in state
-    NutrientMgr.getRecipebyNutrient(1).then(nutrientRecipes => {
+    NutrientMgr.getRecipebyNutrient(this.props.nutrientId).then(nutrientRecipes => {
+      console.log(nutrientRecipes)
       this.setState({
         nutrientRecipes: nutrientRecipes
       });
     });
 }
   render() {
+    // return a car with recipe and url link
     return (
       <>
         <section className="recipe-list">
         </section>
         <div className="container-cards">
-          {this.state.nutrientRecipes.map(singleRecipe => (
-            <RecipeCard
+        {this.state.nutrientRecipes.map(singleRecipe => (
+             !singleRecipe.archived ?(
+            <NutrientRecipeCard
               key={singleRecipe.id}
               recipeProp={singleRecipe}
               {...this.props}
             />
+            ) : (
+              null
+            )
           ))}
         </div>
       </>

@@ -90,7 +90,7 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
-          path="/recipes/by_nutrient"
+          path="/recipe_nutrients/:nutrientId(\d+)"
           render={props => {
             return <RecipeNutrientList {...props} />;
           }}
