@@ -5,13 +5,6 @@ import { Button } from "react-bootstrap";
 import Microlink from "@microlink/react";
 
 class RecipeCard extends Component {
-  // call method to delete recipe and return refreshed list of recipes
-  handleDelete = () => {
-    //invoke the delete function in AnimalManger and re-direct to the animal list.
-    this.setState({loadingStatus: true})
-    RecipeMgr.softDelete(this.props.recipeProp.id)
-    .then(() => this.props.history.push("/recipes"))
-}
 
   render() {
     return (
@@ -27,7 +20,7 @@ class RecipeCard extends Component {
             variant="light"
             type="submit"
             size="lg"
-            onClick={this.handleDelete}
+            onClick={()=>{this.props.deleteRecipe(this.props.recipeProp.id)}}
           >
             Delete
           </Button>

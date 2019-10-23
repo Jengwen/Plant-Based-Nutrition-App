@@ -92,7 +92,8 @@ class ApplicationViews extends Component {
         <Route
           path="/recipe_nutrients/:nutrientId(\d+)"
           render={props => {
-            return <RecipeNutrientList {...props} />;
+            return <RecipeNutrientList {...props}
+            nutrientId={parseInt(props.match.params.nutrientId)}/>;
           }}
         />
         <Route

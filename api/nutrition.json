@@ -68,12 +68,14 @@
     {
       "title": "Pumpkin Pasta",
       "url": "https://elavegan.com/pumpkin-pasta-bake/",
-      "id": 1
+      "id": 1,
+      "archived": true
     },
     {
       "title": "Pasta Vodka",
       "url": "https://ericasrecipes.com/vegan-pasta-alla-vodka/",
-      "id": 3
+      "id": 3,
+      "archived": false
     },
     {
       "title": "Pumpkin Seed Hummus",
@@ -85,13 +87,7 @@
       "title": "Green Goddess Wrap",
       "url": "https://www.chefcharitymorgan.com/recipes/2019/7/11/green-goddess-wrap",
       "id": 7,
-      "archived": true
-    },
-    {
-      "title": "Goulash",
-      "url": "thegoulash.com",
-      "archived": true,
-      "id": 8
+      "archived": false
     },
     {
       "title": "Jambalaya",
@@ -182,11 +178,6 @@
       "recipeId": 7,
       "nutrientId": 5,
       "id": 14
-    },
-    {
-      "recipeId": 8,
-      "nutrientId": 1,
-      "id": 15
     },
     {
       "recipeId": 9,

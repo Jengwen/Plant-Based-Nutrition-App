@@ -111,6 +111,9 @@ class RecipeForm extends Component {
             Save Recipe
           </Button>
         </section>
+        <section id="search-area">
+          <h3 id="search-header"></h3>
+        </section>
       </>
     );
   }

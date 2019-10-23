@@ -11,6 +11,16 @@ class RecipeList extends Component {
     recipes: []
   };
 
+   // call method to delete recipe and return refreshed list of recipes
+   deleteRecipe = id => {
+    RecipeMgr.softDelete(id)
+    .then(() => {
+     RecipeMgr.getAllRecipes().then((recipes)=> {
+       this.setState({
+         recipes: recipes
+       })
+     })
+})}
   componentDidMount() {
     console.log("Recipe LIST: ComponentDidMount");
     //getAll recipes from Recipe Manager and hang on to that data; put it in state
@@ -33,7 +43,7 @@ class RecipeList extends Component {
               this.props.history.push("/recipes/new");
             }}
           >
-            Create Recipe
+            Add More Recipes
           </Button>
         </section>
         <div className="container-cards">
@@ -42,6 +52,7 @@ class RecipeList extends Component {
             <RecipeCard
               key={singleRecipe.id}
               recipeProp={singleRecipe}
+              deleteRecipe={this.deleteRecipe}
               {...this.props}
             />
             ) : (
