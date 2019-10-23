@@ -100,42 +100,50 @@
     {
       "id": 1,
       "value": "Protein",
-      "label": "Protein"
+      "label": "Protein",
+      "apiCode": "[PROCNT]=10%2B"
     },
     {
       "id": 2,
       "value": "Fat",
-      "label": "Fat"
+      "label": "Fat",
+      "apiCode": "[FAT]=50%2B"
     },
     {
       "id": 3,
       "value": "Carbohydrates",
-      "label": "Carbohydrates"
+      "label": "Carbohydrates",
+      "apiCode": "[CHOCDF]=50%2B"
     },
     {
       "id": 4,
       "value": "Fiber",
-      "label": "Fiber"
+      "label": "Fiber",
+      "apiCode": "[FIBTG]=10%2B"
     },
     {
       "id": 5,
       "value": "Iron",
-      "label": "Iron"
+      "label": "Iron",
+      "apiCode": "[FE]=10%2B"
     },
     {
       "id": 6,
       "value": "Calcium",
-      "label": "Calcium"
+      "label": "Calcium",
+      "apiCode": "[CA]=300%2B"
     },
     {
       "id": 7,
       "label": "Potassium",
-      "value": "Potassium"
+      "value": "Potassium",
+      "apiCode": "[K]=1500%2B"
     },
     {
       "id": 8,
       "value": "Vitamin D",
-      "label": "Vitamin D"
+      "label": "Vitamin D",
+      "apiCode": "[VITD]=200%2B"
     }
   ],
   "recipe_nutrients": [

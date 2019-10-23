@@ -60,13 +60,11 @@ class RecipeForm extends Component {
     }
   };
   componentDidMount() {
-    console.log("recipe form, component did mount");
     // fetch all possible nutrients to select while creating a recipe and put in array
     NutrientMgr.getAllNutrients().then(nutrients => {
       this.setState({
         nutrients: nutrients
       });
-      console.log(nutrients);
     });
   }
 
@@ -112,7 +110,13 @@ class RecipeForm extends Component {
           </Button>
         </section>
         <section id="search-area">
-          <h3 id="search-header"></h3>
+          <h3 id="search-header">Find More Recipes</h3>
+          <div id="search-bar">
+          <Form id= "searchForm" inline>
+      <Form.Control onChange={this.handleFieldChange} placeholder="Search" />
+      <Button id="search-btn" variant="light">Search</Button>
+    </Form>
+          </div>
         </section>
       </>
     );

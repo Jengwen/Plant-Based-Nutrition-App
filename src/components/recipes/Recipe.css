@@ -15,9 +15,21 @@
     text-align: center;
     margin: 1em
 }
+#search-header{
+    font-family: Cabin;
+    color: #82846d;
+    text-align: center;
+    margin: 1em
+}
 #recipe-form{
     margin-left: 10em;
 }
+#searchForm{
+margin-left: 10em;
+}
 #save-recipe-btn{
     margin: 1.5em
+}
+#search-btn{
+    margin: 1.5em;
 }
