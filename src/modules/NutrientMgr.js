@@ -5,6 +5,7 @@ export default {
   getAllNutrients() {
 return fetch(`${remoteURL}/nutrients`).then(result => result.json())
   },
+  // get recipes by specific nutrients
   getRecipebyNutrient (id) {
     return fetch(`${remoteURL}/recipe_nutrients/?nutrientId=${id}&_expand=recipe`)
     .then(result =>result.json())

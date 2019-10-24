@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import RecipeMgr from "../../modules/RecipeMgr";
 import { Form, Button } from "react-bootstrap";
 import NutrientMgr from "../../modules/NutrientMgr";
+import UserMgr from "../../modules/UserMgr";
+import MealTypeMgr from "../../modules/MealTypeMgr";
 import Select from "react-select";
 
 class RecipeForm extends Component {
@@ -10,7 +12,9 @@ class RecipeForm extends Component {
     url: "",
     userId: "",
     nutrients: [],
-    selectValues: []
+    mealTypes: [],
+    selectValues: [],
+    selectValue:[]
   };
 
   handleFieldChange = evt => {
@@ -22,6 +26,10 @@ class RecipeForm extends Component {
   _onChange(value) {
     //console.log(value) - just to see what we recive from <Select />
     this.setState({ selectValues: value });
+  };
+  _onChanges(value) {
+    console.log(value)
+    this.setState({ selectValue: value });
   }
   // method to construct new recipe
   constructNewRecipe = evt => {
@@ -33,8 +41,9 @@ class RecipeForm extends Component {
       const recipe = {
         title: this.state.title,
         url: this.state.url,
+        mealTypeId: this.state.selectValue.id,
+        userId: this.state.userId,
         archived: false
-        // userId: this.props.userProp.id
       };
 
       //post the recipe and bring back recipe Id
@@ -51,7 +60,6 @@ class RecipeForm extends Component {
           };
           // call fetch to post each recipe-nutrient object to json
           RecipeMgr.postNutrients(recipeNutrient);
-
         });
 
         // take the recipe_nutrient objects and redirect to recipes
@@ -66,10 +74,23 @@ class RecipeForm extends Component {
         nutrients: nutrients
       });
     });
+    // fetch the logged in user's id to attach to saved recipes
+    UserMgr.getOne().then(singleUser => {
+      this.setState({
+        userId: singleUser.id
+      });
+    });
+    // fetch all of the possible meal types
+    MealTypeMgr.getAllMealTypes().then(mealTypes => {
+      console.log(mealTypes);
+      this.setState({
+        mealTypes: mealTypes
+      });
+    });
   }
 
   render() {
-    // create selection dropdown form for nutrients in artay
+    // create selection dropdown form for nutrients in array
     const nutrientSelect = () => (
       <Select
         onChange={this._onChange.bind(this)}
@@ -77,6 +98,17 @@ class RecipeForm extends Component {
         isMulti
         name="nutrientSelect"
         className="basic-multi-select"
+        classNamePrefix="select"
+      />
+    );
+    // create select dropdown form for mealTypes in array
+    const mealTypeSelect = () => (
+      <Select
+        options={this.state.mealTypes}
+        defaultValue={this.state.mealTypes[0]}
+        onChange={this._onChanges.bind(this)}
+        name="mealTypeSelect"
+        className="basic-single"
         classNamePrefix="select"
       />
     );
@@ -94,8 +126,12 @@ class RecipeForm extends Component {
             <Form.Group controlId="url">
               <Form.Label>Recipe Url</Form.Label>
               <Form.Control onChange={this.handleFieldChange} />
-              {/* multi select nutrients to tag to a recipe */}
             </Form.Group>
+            <Form.Label>Meal Type</Form.Label>
+            {/* single select box for meal type */}
+            {mealTypeSelect()}
+            {/* multi select nutrients to tag to a recipe */}
+            <Form.Label>Nutrients</Form.Label>
             {nutrientSelect()}
           </Form>
           {/* button to save recipe to the json and  redirect to recipe list*/}
@@ -108,15 +144,6 @@ class RecipeForm extends Component {
           >
             Save Recipe
           </Button>
-        </section>
-        <section id="search-area">
-          <h3 id="search-header">Find More Recipes</h3>
-          <div id="search-bar">
-          <Form id= "searchForm" inline>
-      <Form.Control onChange={this.handleFieldChange} placeholder="Search" />
-      <Button id="search-btn" variant="light">Search</Button>
-    </Form>
-          </div>
         </section>
       </>
     );

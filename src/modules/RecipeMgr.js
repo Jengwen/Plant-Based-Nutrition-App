@@ -9,6 +9,10 @@ export default {
   getOneRecipe(id) {
     return fetch(`${remoteURL}/recipes/${id}`).then(result => result.json());
   },
+// get all recipes by a specific logged in user
+getAllMyRecipes() {
+  return fetch(`${remoteURL}/recipes/?userId=${sessionStorage.getItem('credentials')}`).then(result => result.json());
+},
 
   // save a recipe to the json server
   post(newRecipe) {

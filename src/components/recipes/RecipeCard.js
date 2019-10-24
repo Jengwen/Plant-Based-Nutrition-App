@@ -1,6 +1,5 @@
 //import the components we will need
 import React, { Component } from "react";
-import RecipeMgr from "../../modules/RecipeMgr";
 import { Button } from "react-bootstrap";
 import Microlink from "@microlink/react";
 

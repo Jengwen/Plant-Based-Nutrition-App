@@ -10,6 +10,8 @@ import RecipeList from "./recipes/RecipeList";
 import RecipeForm from "./recipes/RecipeForm";
 import ResourceList from "./resources/ResourceList";
 import RecipeNutrientList from "./recipes/RecipeListNutrient";
+import RecipeSearch from "./recipes/RecipeSearch";
+import MyRecipeList from "./recipes/MyRecipeList";
 
 class ApplicationViews extends Component {
   render() {
@@ -81,19 +83,31 @@ class ApplicationViews extends Component {
         <Route
           path="/recipes/new"
           render={props => {
-            if (Auth0Client.isAuthenticated()) {
               return <RecipeForm {...props} />;
-            } else {
-              Auth0Client.signIn();
-              return null;
             }
+          }
+        />
+        <Route
+          path="/recipes/search"
+          render={props => {
+            return <RecipeSearch {...props} />;
+          }}
+        />
+        <Route
+          path="/recipes/myRecipes"
+          render={props => {
+            return <MyRecipeList {...props} />;
           }}
         />
         <Route
           path="/recipe_nutrients/:nutrientId(\d+)"
           render={props => {
-            return <RecipeNutrientList {...props}
-            nutrientId={parseInt(props.match.params.nutrientId)}/>;
+            return (
+              <RecipeNutrientList
+                {...props}
+                nutrientId={parseInt(props.match.params.nutrientId)}
+              />
+            );
           }}
         />
         <Route
