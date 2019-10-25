@@ -10,7 +10,7 @@ class NutrientRecipeCard extends Component {
         <div className="card-content">
           <h3>
             Title:{" "}
-            <span className="card-recipe">{this.props.nutrientRecipeProp.recipe.title}</span>
+            <span className="card-recipe">{this.props.nutrientRecipeProp.recipe.label}</span>
           </h3>
 <Microlink url={this.props.nutrientRecipeProp.recipe.url} size="normal"/>
         </div>

@@ -8,7 +8,7 @@ import Select from "react-select";
 
 class RecipeForm extends Component {
   state = {
-    title: "",
+    label: "",
     url: "",
     userId: "",
     nutrients: [],
@@ -22,11 +22,12 @@ class RecipeForm extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
-
+// method to collect values in dropdown selection
   _onChange(value) {
     //console.log(value) - just to see what we recive from <Select />
     this.setState({ selectValues: value });
   };
+    // method to collect values in dropdown for multi select
   _onChanges(value) {
     console.log(value)
     this.setState({ selectValue: value });
@@ -34,12 +35,12 @@ class RecipeForm extends Component {
   // method to construct new recipe
   constructNewRecipe = evt => {
     evt.preventDefault();
-    if (this.state.title === "" || this.state.url === "") {
+    if (this.state.label === "" || this.state.url === "") {
       window.alert("Please input an title and url link");
     } else {
       this.setState({ loadingStatus: true });
       const recipe = {
-        title: this.state.title,
+        label: this.state.label,
         url: this.state.url,
         mealTypeId: this.state.selectValue.id,
         userId: this.state.userId,
@@ -119,7 +120,7 @@ class RecipeForm extends Component {
           <h3 id="recipe-input-header">Link and Save Your Favorite Recipes</h3>
           {/* render form to create recipe input */}
           <Form id="recipe-form">
-            <Form.Group controlId="title">
+            <Form.Group controlId="label">
               <Form.Label>Title</Form.Label>
               <Form.Control onChange={this.handleFieldChange} />
             </Form.Group>

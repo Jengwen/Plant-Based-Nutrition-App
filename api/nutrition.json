@@ -56,7 +56,7 @@
   ],
   "recipes": [
     {
-      "title": "Pumpkin Pasta",
+      "label": "Pumpkin Pasta",
       "url": "https://elavegan.com/pumpkin-pasta-bake/",
       "id": 1,
       "mealTypeId": 4,
@@ -64,7 +64,7 @@
       "archived": false
     },
     {
-      "title": "Pasta Vodka",
+      "label": "Pasta Vodka",
       "url": "https://ericasrecipes.com/vegan-pasta-alla-vodka/",
       "id": 3,
       "mealTypeId": 1,
@@ -72,7 +72,7 @@
       "archived": false
     },
     {
-      "title": "Pumpkin Seed Hummus",
+      "label": "Pumpkin Seed Hummus",
       "url": "https://crumbsandcaramel.com/roasted-pumpkin-seed-hummus/",
       "id": 6,
       "mealTypeId": 4,
@@ -80,7 +80,7 @@
       "archived": false
     },
     {
-      "title": "Green Goddess Wrap",
+      "label": "Green Goddess Wrap",
       "url": "https://www.chefcharitymorgan.com/recipes/2019/7/11/green-goddess-wrap",
       "id": 7,
       "mealTypeId": 1,
@@ -88,7 +88,7 @@
       "archived": false
     },
     {
-      "title": "Jambalaya",
+      "label": "Jambalaya",
       "url": "https://skinnyms.com/vegan-jambalaya-2/",
       "archived": false,
       "id": 9,
@@ -96,19 +96,27 @@
       "userId": 3
     },
     {
-      "title": "Breakfast Sandwich",
+      "label": "Breakfast Sandwich",
       "url": "https://veganhuggs.com/vegan-breakfast-sandwich/",
       "userId": 3,
       "archived": false,
       "id": 10
     },
     {
-      "title": "Blueberry Waffles",
+      "label": "Blueberry Waffles",
       "url": "http://www.isachandra.com/2012/10/blueberry-oatmeal-waffles/",
       "mealTypeId": 2,
       "userId": 3,
       "archived": false,
       "id": 11
+    },
+    {
+      "label": "Wild Rice Mushroom Soup",
+      "url": "https://highcarbhannah.co/recipes/creamy-wild-rice-soup-vegan-oil-free/",
+      "mealTypeId": 3,
+      "userId": 3,
+      "archived": false,
+      "id": 12
     }
   ],
   "nutrients": [
@@ -268,6 +276,26 @@
       "recipeId": 11,
       "nutrientId": 3,
       "id": 24
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 3,
+      "id": 25
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 4,
+      "id": 26
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 1,
+      "id": 27
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 1,
+      "id": 28
     }
   ],
   "activitylevels": [
