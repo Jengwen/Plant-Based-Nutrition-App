@@ -14,8 +14,8 @@ class MyRecipeList extends Component {
     recipes: [],
     nutrients: [],
     mealTypes: [],
-    selectValues: [],
-    selectValue:[]
+    selectValueNut: [],
+    selectValueMeal:[]
   };
   // method to gather info from search field
   handleFieldChange = evt => {
@@ -24,14 +24,13 @@ class MyRecipeList extends Component {
     this.setState(stateToChange);
   };
 // method to collect values in dropdown selection
-  _onChange(value) {
+  _onChangeNut(value) {
     //console.log(value) - just to see what we recive from <Select />
-    this.setState({ selectValues: value });
+    this.setState({ selectValueNut: value });
   };
   // method to collect values in dropdown for multi select
-  _onChanges(value) {
-    console.log(value)
-    this.setState({ selectValue: value });
+  _onChangeMeal(value) {
+    this.setState({ selectValueMeal: value });
   }
   // call method to delete recipe and return refreshed list of recipes by Userid
   deleteRecipe = id => {
@@ -78,11 +77,10 @@ class MyRecipeList extends Component {
     // create selection dropdown form for nutrients in array
     const nutrientSelect = () => (
       <Select
-        onChange={this._onChange.bind(this)}
+        onChange={this._onChangeNut.bind(this)}
         options={this.state.nutrients}
-        isMulti
         name="nutrientSelect"
-        className="basic-multi-select"
+        className="basic-single"
         classNamePrefix="select"
       />
     );
@@ -91,21 +89,24 @@ class MyRecipeList extends Component {
       <Select
         options={this.state.mealTypes}
         defaultValue={this.state.mealTypes[0]}
-        onChange={this._onChanges.bind(this)}
+        onChange={this._onChangeMeal.bind(this)}
         name="mealTypeSelect"
         className="basic-single"
         classNamePrefix="select"
       />
     );
+    const filteredRecipes = this.state.recipes.filter(this.state.selectValueMeal.id)
+    console.log(this.state.recipes)
     return (
+
       <>
         <section id="filter">
           <Form id="recipe-filter">
-            <Form.Label>Meal Type</Form.Label>
+            <Form.Label>Filter By Meal Type</Form.Label>
             {/* single select box for meal type */}
             {mealTypeSelect()}
             {/* multi select nutrients to tag to a recipe */}
-            <Form.Label>Nutrients</Form.Label>
+            <Form.Label>Filter By Nutrients</Form.Label>
             {nutrientSelect()}
           </Form>
         </section>
