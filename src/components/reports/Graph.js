@@ -12,7 +12,7 @@ class Graph extends Component {
           {
             label: "",
             data: [],
-            backgroundColor: []
+            backgroundColor: ["rgba(255, 99, 132, 0.6)"]
           }
         ]
       }
@@ -21,7 +21,7 @@ class Graph extends Component {
 
   componentDidMount() {
     console.log("Graph: ComponentDidMount");
-// set state of data, labels
+    // set state of data, labels
     this.setState({
       graphData: {
         labels: [],

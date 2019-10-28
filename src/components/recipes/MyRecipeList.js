@@ -15,7 +15,7 @@ class MyRecipeList extends Component {
     nutrients: [],
     mealTypes: [],
     selectValueNut: [],
-    selectValueMeal:[]
+    selectValueMeal: []
   };
   // method to gather info from search field
   handleFieldChange = evt => {
@@ -23,11 +23,11 @@ class MyRecipeList extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
-// method to collect values in dropdown selection
+  // method to collect values in dropdown selection
   _onChangeNut(value) {
     //console.log(value) - just to see what we recive from <Select />
     this.setState({ selectValueNut: value });
-  };
+  }
   // method to collect values in dropdown for multi select
   _onChangeMeal(value) {
     this.setState({ selectValueMeal: value });
@@ -96,10 +96,10 @@ class MyRecipeList extends Component {
       />
     );
     // filter through user's recipes by mealtypes and return only those recipe cards
-const recipesByType = this.state.recipes.filter(function(recipe){
-  return recipe.mealTypeId === 1
-})
-console.log(recipesByType)
+    const recipesByType = this.state.recipes.filter(function(recipe) {
+      return recipe.mealTypeId === 1;
+    });
+    console.log(recipesByType);
 
     return (
       <>
@@ -117,16 +117,25 @@ console.log(recipesByType)
         <section id="my-recipe-list">
           {/* returns list of recipes by user and if filtered by filter options selected */}
           <div className="container-cards">
-            {this.state.recipes.map(singleRecipe =>
-              !singleRecipe.archived ? (
-                <RecipeCard
-                  key={singleRecipe.id}
-                  recipeProp={singleRecipe}
-                  deleteRecipe={this.deleteRecipe}
-                  {...this.props}
-                />
-              ) : null
-            )}
+            {/* {this.state.selectValueMeal === null
+              ? */}
+               {this.state.recipes.map(singleRecipe => (
+                  <RecipeCard
+                    key={singleRecipe.id}
+                    recipeProp={singleRecipe}
+                    deleteRecipe={this.deleteRecipe}
+                    {...this.props}
+                  />
+                ))}
+              {/* :( this.state.recipesByType.map(typeRecipe => (
+                  <RecipeCard
+                    key={typeRecipe.id}
+                    recipeProp={typeRecipe}
+                    deleteRecipe={this.deleteRecipe}
+                    {...this.props}
+                  /> */}
+              {/* )) */}
+              {/* )} */}
           </div>
         </section>
       </>

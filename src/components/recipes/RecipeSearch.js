@@ -57,9 +57,9 @@ class RecipeSearch extends Component {
                 id="searchValue"
                  onClick= {this.handleFieldChange}
                 size="lg"
-                placeholder="Search for recipes by nutrient, meal, or ingredient"
+                placeholder="Search for recipes by keyword "
               />
-              <Button id="search" variant="light"
+              <Button id="search-btn" variant="light"
               disabled= {this.state.loadingStatus}
               onClick= {this.handleSearch}
               >Search</Button>
