@@ -95,22 +95,27 @@ class MyRecipeList extends Component {
         classNamePrefix="select"
       />
     );
-    const filteredRecipes = this.state.recipes.filter(this.state.selectValueMeal.id)
-    console.log(this.state.recipes)
-    return (
+    // filter through user's recipes by mealtypes and return only those recipe cards
+const recipesByType = this.state.recipes.filter(function(recipe){
+  return recipe.mealTypeId === 1
+})
+console.log(recipesByType)
 
+    return (
       <>
         <section id="filter">
+          {/* filter select boxes to filter recipes */}
           <Form id="recipe-filter">
-            <Form.Label>Filter By Meal Type</Form.Label>
+            <Form.Label id="filter-label">Filter By Meal Type</Form.Label>
             {/* single select box for meal type */}
             {mealTypeSelect()}
             {/* multi select nutrients to tag to a recipe */}
-            <Form.Label>Filter By Nutrients</Form.Label>
+            <Form.Label id="filter-label">Filter By Nutrients</Form.Label>
             {nutrientSelect()}
           </Form>
         </section>
         <section id="my-recipe-list">
+          {/* returns list of recipes by user and if filtered by filter options selected */}
           <div className="container-cards">
             {this.state.recipes.map(singleRecipe =>
               !singleRecipe.archived ? (

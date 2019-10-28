@@ -11,29 +11,29 @@ class UserReport extends Component {
           <section id="report-results">
             <div id="calories">
               <h3 id="calorie-header">Calories:</h3>
-              <p>{this.props.calorieProp}</p>
+              <p id="calorie-result">{this.props.calorieProp}</p>
             </div>
             <div id="macro">
               <h3 id="macro-header">Macronutrients:</h3>
               <div id="protein">
                 <h4 id="protein-heading">Protein:</h4>
-                <p>{this.props.proteinProp} grams</p>
+                <p id="protein-result">{this.props.proteinProp} grams</p>
                 <Link to={`/recipe_nutrients/1`}>
-                  <button>See Recipes</button>
+                  <button id="protein-result">See Recipes</button>
                 </Link>
               </div>
-              <h4 id="protein-heading">Fats:</h4>
               <div id="fats">
-                <p>{this.props.fatProp} grams</p>
+              <h4 id="protein-heading">Fats:</h4>
+                <p id="fat-result">{this.props.fatProp} grams</p>
                 <Link to={`/recipe_nutrients/2`}>
-                  <button>See Recipes</button>
+                  <button id="fat-result">See Recipes</button>
                 </Link>
               </div>
-              <h4 id="protein-heading">Carbohydrates:</h4>
               <div id="carbs">
-                <p>{this.props.carbProp} grams</p>
+              <h4 id="protein-heading">Carbohydrates:</h4>
+                <p id="carb-result">{this.props.carbProp} grams</p>
                 <Link to={`/recipe_nutrients/3`}>
-                  <button>See Recipes</button>
+                  <button id="carb-result">See Recipes</button>
                 </Link>
               </div>
             </div>
@@ -44,37 +44,41 @@ class UserReport extends Component {
             <h3 id="micro-header">Micronutrients:</h3>
             <div id="micro-details">
               <div id="calcium">
-                <p>Calcium: {this.props.calciumProp} grams</p>
+                <p id="micro-results">Calcium: {this.props.calciumProp} grams</p>
                 <Link to={`/recipe_nutrients/6`}>
-                  <button>See Recipes</button>
+                  <button id="micro-results">See Recipes</button>
                 </Link>
               </div>
               <div id="fiber">
-                <p>Fiber: {this.props.fiberProp} grams</p>
+                <p id="micro-results">Fiber: {this.props.fiberProp} grams</p>
                 <Link to={`/recipe_nutrients/4`}>
-                  <button>See Recipes</button>
+                  <button id="micro-results">See Recipes</button>
                 </Link>
               </div>
               <div id="fiber">
-                <p>Iron: {this.props.ironProp} grams</p>
+                <p id="micro-results">Iron: {this.props.ironProp} grams</p>
                 <Link to={`/recipe_nutrients/5`}>
-                  <button>See Recipes</button>
+                  <button id="micro-results">See Recipes</button>
                 </Link>
               </div>
               <div id="potassium">
-                <p>Potassium: 4700 grams</p>
+                <p id="micro-results">Potassium: 4700 grams</p>
                 <Link to={`/recipe_nutrients/7`}>
-                  <button>See Recipes</button>
+                  <button id="micro-results">See Recipes</button>
                 </Link>
               </div>
-              <p>Vitamin D: 600 grams</p>
+              <div id="vitD">
+              <p id="micro-results">Vitamin D: 600 grams</p>
               <Link to={`/recipe_nutrients/8`}>
-                <button>See Recipes</button>
+                <button id="micro-results">See Recipes</button>
               </Link>
+              </div>
+              <div id="other-nutrients">
               <p>Vitamin C: {this.props.vitaminCProp}</p>
               <p>Niacin: {this.props.niacinProp}</p>
               <p>B6: {this.props.vitaminB6Prop}</p>
               <p>B12: 2.4</p>
+              </div>
             </div>
           </div>
         </section>

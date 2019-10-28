@@ -1,39 +1,102 @@
 #report-heading {
-    font-family: Cabin;
-    color: #95a472;
-    text-align: center
- }
- #calorie-header {
-     font-family: Cabin;
-     color: #82846d;
- }
- #macro-header {
-     font-family: Cabin;
-     color:#82846d;
- }
- #micro-header {
-    font-family: Cabin;
-    color:#82846d;
+  font-family: Cabin;
+  color: #95a472;
+  text-align: center;
 }
- #protein-heading {
-     font-family: Cabin;
-     color: #82846d;
- }
- #report-results {
-     display: flex;
-     margin-left:5em;
-     margin-top: 3em;
-     flex-direction: column;
- }
- #macro {
-     margin-left: 3em;
- }
- #micro {
-    margin-left: 15em;
+#calorie-header {
+  font-family: Cabin;
+  color: #82846d;
 }
-#micro-details{
-    margin-left: 3em;
+#macro-header {
+  font-family: Cabin;
+  color: #82846d;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
- p {
-     font-size: 20px;
- }
+#micro-header {
+  font-family: Cabin;
+  color: #82846d;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+#protein-heading {
+  font-family: Cabin;
+  color: #82846d;
+  margin-left: 2.5em;
+}
+#report-results {
+  display: flex;
+  margin-left: 5em;
+  margin-top: 3em;
+  flex-direction: column;
+}
+#macro {
+  margin-left: 3em;
+}
+#micro {
+  margin-left: 8em;
+}
+#micro-details {
+  margin-left: 3em;
+}
+p {
+  font-size: 20px;
+}
+#calories {
+  display: flex;
+  justify-content: flex-start;
+}
+#calorie-result {
+  padding-left: 4em;
+}
+#protein {
+  display: flex;
+  flex-direction: row;
+}
+#protein-result {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#carbs {
+  display: flex;
+  flex-direction: row;
+}
+#carb-result {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#fats {
+  display: flex;
+  flex-direction: row;
+}
+
+#fat-result {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#calcium {
+  display: flex;
+  flex-direction: row;
+}
+#fiber {
+  display: flex;
+  flex-direction: row;
+}
+#potassium {
+  display: flex;
+  flex-direction: row;
+}
+#vitD {
+  display: flex;
+  flex-direction: row;
+}
+#micro-results {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#other-nutrients{
+    margin-left: 1.1em;
+}
+Button{
+    background-color: #95a472;
+}
