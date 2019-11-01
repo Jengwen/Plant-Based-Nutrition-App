@@ -97,6 +97,8 @@ class MyRecipeList extends Component {
     );
     // filter through user's recipes by mealtypes and return only those recipe cards
     const recipesByType = this.state.recipes.filter(function(recipe) {
+      // if a selection is made in the meal type selection map through those
+      // or if no selection is made just list all recipes for the logged in user
       return recipe.mealTypeId === 1;
     });
     console.log(recipesByType);
@@ -115,10 +117,8 @@ class MyRecipeList extends Component {
           </Form>
         </section>
         <section id="my-recipe-list">
-          {/* returns list of recipes by user and if filtered by filter options selected */}
+          {/* returns list of recipes by user or if filtered by filter options selected */}
           <div className="container-cards">
-            {/* {this.state.selectValueMeal === null
-              ? */}
                {this.state.recipes.map(singleRecipe => (
                   <RecipeCard
                     key={singleRecipe.id}
@@ -127,15 +127,6 @@ class MyRecipeList extends Component {
                     {...this.props}
                   />
                 ))}
-              {/* :( this.state.recipesByType.map(typeRecipe => (
-                  <RecipeCard
-                    key={typeRecipe.id}
-                    recipeProp={typeRecipe}
-                    deleteRecipe={this.deleteRecipe}
-                    {...this.props}
-                  /> */}
-              {/* )) */}
-              {/* )} */}
           </div>
         </section>
       </>
