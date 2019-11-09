@@ -16,11 +16,11 @@
       "id": 3,
       "name": "Avery Elaine",
       "email": "avery@avery.com",
-      "gender": "female",
-      "age": 15,
+      "gender": "male",
+      "age": 25,
       "height": 61,
-      "weight": 100,
-      "activitylevelId": 3
+      "weight": 140,
+      "activitylevelId": 1
     },
     {
       "aud": "auth0|5da9c9fad5646a0e18ef86a7",
@@ -133,6 +133,14 @@
       "userId": 3,
       "archived": true,
       "id": 14
+    },
+    {
+      "label": "Breakfast Burrito",
+      "url": "burrito.com",
+      "mealTypeId": 3,
+      "userId": 3,
+      "archived": false,
+      "id": 15
     }
   ],
   "nutrients": [
@@ -337,6 +345,16 @@
       "recipeId": 14,
       "nutrientId": 6,
       "id": 33
+    },
+    {
+      "recipeId": 15,
+      "nutrientId": 1,
+      "id": 34
+    },
+    {
+      "recipeId": 15,
+      "nutrientId": 5,
+      "id": 35
     }
   ],
   "activitylevels": [

@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import RecipeCard from "./RecipeCard";
 import RecipeMgr from "../../modules/RecipeMgr";
 import MealTypeMgr from "../../modules/MealTypeMgr";
-import NutrientMgr from "../../modules/NutrientMgr";
 import Select from "react-select";
 import "./Recipe.css";
 import { Form } from "react-bootstrap";
@@ -12,9 +11,7 @@ class MyRecipeList extends Component {
   //define what this component needs to render
   state = {
     recipes: [],
-    nutrients: [],
     mealTypes: [],
-    selectValueNut: [],
     selectValueMeal: []
   };
   // method to gather info from search field
@@ -24,11 +21,6 @@ class MyRecipeList extends Component {
     this.setState(stateToChange);
   };
   // method to collect values in dropdown selection
-  _onChangeNut(value) {
-    //console.log(value) - just to see what we recive from <Select />
-    this.setState({ selectValueNut: value });
-  }
-  // method to collect values in dropdown for multi select
   _onChangeMeal(value) {
     this.setState({ selectValueMeal: value });
   }
@@ -66,24 +58,10 @@ class MyRecipeList extends Component {
       });
     });
 
-    // fetch all possible nutrients to select while creating a recipe and put in array
-    NutrientMgr.getAllNutrients().then(nutrients => {
-      this.setState({
-        nutrients: nutrients
-      });
-    });
+
   }
   render() {
-    // create selection dropdown form for nutrients in array
-    const nutrientSelect = () => (
-      <Select
-        onChange={this._onChangeNut.bind(this)}
-        options={this.state.nutrients}
-        name="nutrientSelect"
-        className="basic-single"
-        classNamePrefix="select"
-      />
-    );
+
     // create select dropdown form for mealTypes in array
     const mealTypeSelect = () => (
       <Select
@@ -98,7 +76,8 @@ class MyRecipeList extends Component {
     // filter through user's recipes by mealtypes and return only those recipe cards
     const recipesByType = this.state.recipes.filter(function(recipe) {
       // if a selection is made in the meal type selection map through those
-      // or if no selection is made just list all recipes for the logged in user
+
+      // or if no selection is made just list all recipes for the logged in
       return recipe.mealTypeId === 1;
     });
     console.log(recipesByType);
@@ -111,13 +90,10 @@ class MyRecipeList extends Component {
             <Form.Label id="filter-label">Filter By Meal Type</Form.Label>
             {/* single select box for meal type */}
             {mealTypeSelect()}
-            {/* multi select nutrients to tag to a recipe */}
-            <Form.Label id="filter-label">Filter By Nutrients</Form.Label>
-            {nutrientSelect()}
           </Form>
         </section>
         <section id="my-recipe-list">
-          {/* returns list of recipes by user or if filtered by filter options selected */}
+          {/* returns list of recipes by user and if filtered by filter options selected */}
           <div className="container-cards">
                {this.state.recipes.map(singleRecipe => (
                   <RecipeCard
