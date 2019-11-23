@@ -18,9 +18,9 @@
       "email": "avery@avery.com",
       "gender": "female",
       "age": 15,
-      "height": 61,
+      "height": 65,
       "weight": 100,
-      "activitylevelId": 3
+      "activitylevelId": 1
     },
     {
       "aud": "auth0|5da9c9fad5646a0e18ef86a7",
@@ -107,7 +107,7 @@
       "url": "http://www.isachandra.com/2012/10/blueberry-oatmeal-waffles/",
       "mealTypeId": 2,
       "userId": 3,
-      "archived": false,
+      "archived": true,
       "id": 11
     },
     {
@@ -117,6 +117,22 @@
       "userId": 3,
       "archived": false,
       "id": 12
+    },
+    {
+      "label": "Spicy Peanut Ramen",
+      "url": "https://www.rabbitandwolves.com/vegan-spicy-thai-peanut-ramen/",
+      "mealTypeId": 1,
+      "userId": 3,
+      "archived": true,
+      "id": 13
+    },
+    {
+      "label": "Spicy Vegan Noodles",
+      "url": "https://www.rabbitandwolves.com/vegan-spicy-thai-peanut-ramen/",
+      "mealTypeId": 1,
+      "userId": 3,
+      "archived": false,
+      "id": 14
     }
   ],
   "nutrients": [
@@ -296,6 +312,16 @@
       "recipeId": 12,
       "nutrientId": 1,
       "id": 28
+    },
+    {
+      "recipeId": 13,
+      "nutrientId": 3,
+      "id": 29
+    },
+    {
+      "recipeId": 14,
+      "nutrientId": 3,
+      "id": 30
     }
   ],
   "activitylevels": [
