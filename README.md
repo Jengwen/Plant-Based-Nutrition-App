@@ -33,20 +33,20 @@ This project was built with React.
 
 ### Using this APP
 
-Fork the directory from https://github.com/jengwen/plantbased to your own local repository.
+Fork the directory from https://github.com/jengwen/Plant-Based-Nutrition-App to your own local repository.
 
 I used node modules from React Bootstrap and Microlinks for styling, Charts-js for graphs, and Select for the dropdown menus.
 
 You will need to install the following to run the program locally:
 
-npm install
+```npm install
 npm install --save react-chartjs-2 chart.js
 npm install @microlink/react styled-components --save
 npm install react-select
-
+```
 In the project directory, you can run:
 
-npm start
+`npm start`
 
 Which runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser. The page will reload if you make edits.
