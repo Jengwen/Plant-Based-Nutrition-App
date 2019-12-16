@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import RecipeCard from "./RecipeCard";
 import RecipeMgr from "../../modules/RecipeMgr";
 import MealTypeMgr from "../../modules/MealTypeMgr";
-import NutrientMgr from "../../modules/NutrientMgr";
 import Select from "react-select";
 import "./Recipe.css";
 import { Form } from "react-bootstrap";
@@ -15,7 +14,7 @@ class MyRecipeList extends Component {
     nutrients: [],
     mealTypes: [],
     selectValues: [],
-    selectValue:[]
+    selectValue: []
   };
   // method to gather info from search field
   handleFieldChange = evt => {
@@ -23,14 +22,14 @@ class MyRecipeList extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
-// method to collect values in dropdown selection
+  // method to collect values in dropdown selection
   _onChange(value) {
     //console.log(value) - just to see what we recive from <Select />
     this.setState({ selectValues: value });
-  };
+  }
   // method to collect values in dropdown for multi select
   _onChanges(value) {
-    console.log(value)
+    console.log(value);
     this.setState({ selectValue: value });
   }
   // call method to delete recipe and return refreshed list of recipes by Userid
@@ -67,25 +66,9 @@ class MyRecipeList extends Component {
       });
     });
 
-    // fetch all possible nutrients to select while creating a recipe and put in array
-    NutrientMgr.getAllNutrients().then(nutrients => {
-      this.setState({
-        nutrients: nutrients
-      });
-    });
-  }
+     }
   render() {
-    // create selection dropdown form for nutrients in array
-    const nutrientSelect = () => (
-      <Select
-        onChange={this._onChange.bind(this)}
-        options={this.state.nutrients}
-        isMulti
-        name="nutrientSelect"
-        className="basic-multi-select"
-        classNamePrefix="select"
-      />
-    );
+
     // create select dropdown form for mealTypes in array
     const mealTypeSelect = () => (
       <Select
@@ -104,9 +87,6 @@ class MyRecipeList extends Component {
             <Form.Label>Meal Type</Form.Label>
             {/* single select box for meal type */}
             {mealTypeSelect()}
-            {/* multi select nutrients to tag to a recipe */}
-            <Form.Label>Nutrients</Form.Label>
-            {nutrientSelect()}
           </Form>
         </section>
         <section id="my-recipe-list">

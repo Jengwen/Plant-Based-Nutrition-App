@@ -19,7 +19,6 @@ class Graph extends Component {
   }
 
   componentDidMount() {
-    console.log("Graph: ComponentDidMount");
 
     this.setState({
       graphData: {
@@ -36,6 +35,7 @@ class Graph extends Component {
   }
 
   render() {
+    // render graph with data for the graph
     const graphData = {
       labels: ["Protein", "Carbohydrates", "Fat"],
       datasets: [
@@ -51,6 +51,7 @@ class Graph extends Component {
       backgroundColor: ["rgba(255, 99, 132, 0.6)"]
     };
     return (
+      // return the graph
       <div>
         <Pie
           data={graphData}

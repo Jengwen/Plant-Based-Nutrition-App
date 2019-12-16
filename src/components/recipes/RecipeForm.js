@@ -24,12 +24,10 @@ class RecipeForm extends Component {
   };
 // method to collect values in dropdown selection
   _onChange(value) {
-    //console.log(value) - just to see what we recive from <Select />
     this.setState({ selectValues: value });
   };
     // method to collect values in dropdown for multi select
   _onChanges(value) {
-    console.log(value)
     this.setState({ selectValue: value });
   }
   // method to construct new recipe
@@ -83,7 +81,6 @@ class RecipeForm extends Component {
     });
     // fetch all of the possible meal types
     MealTypeMgr.getAllMealTypes().then(mealTypes => {
-      console.log(mealTypes);
       this.setState({
         mealTypes: mealTypes
       });

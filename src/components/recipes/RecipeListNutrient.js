@@ -11,7 +11,6 @@ class RecipeNutrientList extends Component {
 
   componentDidMount() {
     console.log("Recipe by NutrientLIST: ComponentDidMount");
-    // console.log("this nutrient",this.match.params.nutrientId );
     //getAll recipes from Recipe Manager with a specific nutrient id and hang on to that data; put it in state
     NutrientMgr.getRecipebyNutrient(this.props.nutrientId).then(
       nutrientRecipes => {

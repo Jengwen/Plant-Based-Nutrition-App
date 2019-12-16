@@ -7,6 +7,7 @@ class Home extends Component {
   render() {
     return (
 <>
+{/* headers and log in opportunities  */}
 <section id="login">
 <h1 id= "main-heading">Considering a Plant Based Diet?</h1>
 <h2 id= "second-heading">How Do I Know What to Eat?</h2>

@@ -6,6 +6,7 @@ import "./Recipe.css";
 class SearchRecipeCard extends Component {
   render() {
     return (
+      // return recipe cards with link to recipes search results
       <div className="card">
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={this.props.recipeProp.recipe.image} />

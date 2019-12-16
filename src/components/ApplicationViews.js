@@ -44,6 +44,7 @@ class ApplicationViews extends Component {
             }
           }}
         />
+        {/* route established to got to report */}
         <Route
           exact
           path="/reports"
@@ -56,6 +57,7 @@ class ApplicationViews extends Component {
             }
           }}
         />
+        {/* route to list of all recipes */}
         <Route
           exact
           path="/recipes"

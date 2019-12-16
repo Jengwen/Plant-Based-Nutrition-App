@@ -5,6 +5,7 @@ import Microlink from "@microlink/react"
 class NutrientRecipeCard extends Component {
 
   render() {
+    // render the recipe card with recipe links
     return (
       <div className="card">
         <div className="card-content">
