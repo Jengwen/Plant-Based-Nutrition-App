@@ -52,8 +52,9 @@ Which runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser. The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-You must also run the following command in a separate command prompt to initiate the database json-server -p 5001 -w api/nutrition.json
-
+You must also run the following command in a separate command prompt to initiate the database
+```json-server -p 5001 -w api/nutrition.json
+```
 ## Author
 
 This application was created by Jennifer Johnson see more <https://github.com/jengwen>
