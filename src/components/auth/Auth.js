@@ -1,4 +1,4 @@
-import auth0 from 'auth0-js';
+import auth0 from "auth0-js"
 import AuthConfig from './AuthConfig';
 
 class Auth {
@@ -28,6 +28,7 @@ class Auth {
   }
 
   isAuthenticated() {
+    console.log("is authenticated", new Date().getTime(), this.expiresAt)
     return new Date().getTime() < this.expiresAt;
   }
 
@@ -59,7 +60,7 @@ class Auth {
 
   signOut() {
     this.auth0.logout({
-      returnTo: 'http://localhost:3000',
+      returnTo: 'http://localhost:3000/home',
       clientID: AuthConfig.clientId,
     });
   }

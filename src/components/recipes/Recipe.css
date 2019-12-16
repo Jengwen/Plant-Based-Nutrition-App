@@ -1,0 +1,57 @@
+
+#create-btn{
+    align-content: center;
+    margin: 1.5em;
+}
+.card{
+    width: 50vw;
+}
+.container-cards{
+    margin-left: 10em;
+}
+#recipe-input-header{
+    font-family: Cabin;
+    color: #82846d;
+    text-align: center;
+    margin: 1em
+}
+#search-header{
+    font-family: Cabin;
+    color: #82846d;
+    text-align: center;
+    margin: 1em
+}
+#recipe-form{
+    margin-left: 10em;
+}
+#searchForm{
+margin-left: 17em;
+}
+#save-recipe-btn{
+    margin: 1.5em
+}
+#search-btn{
+    margin: 1.5em;
+}
+#recipe-filter{
+    margin-left: 10em;
+    margin-bottom: 3em;
+}
+#filter-label{
+    font-size: 20px;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+#card-content{
+    font-family: Cabin;
+    color: #82846d;
+}
+#delete-btn{
+    color: #82846d;
+}
+.recipe-list{
+    margin-top: 2em;
+}
+#search-btn{
+    margin: 1em
+}

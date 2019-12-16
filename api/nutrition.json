@@ -1,52 +1,386 @@
 {
-  "users": [],
-  "recipes": [],
-  "nutrients": [
-      { "id": 1, "name": "Protein" },
-      {
-        "id": 2,
-        "name": "Fat"
+  "users": [
+    {
+      "aud": "auth0|5da48280b83c450d4b2c0910",
+      "id": 2,
+      "name": "Bob",
+      "email": "bob@bob.com",
+      "gender": "male",
+      "age": 46,
+      "height": 72,
+      "weight": 185,
+      "activitylevelId": 3
     },
     {
-        "id": 3,
-        "name": "Carbohydrates"
+      "aud": "auth0|5d9df000fb75430e1b802ecb",
+      "id": 3,
+      "name": "Avery Elaine",
+      "email": "avery@avery.com",
+      "gender": "male",
+      "age": 25,
+      "height": 61,
+      "weight": 140,
+      "activitylevelId": 1
     },
     {
-        "id": 4,
-        "name": "Fiber"
+      "aud": "auth0|5da9c9fad5646a0e18ef86a7",
+      "id": 4,
+      "name": "Judy",
+      "email": "judy@judy.com",
+      "gender": "female",
+      "age": 52,
+      "height": 65,
+      "weight": 145,
+      "activitylevelId": 4
     },
     {
-        "id": 5,
-        "name": "Iron"
+      "aud": "auth0|5dadb3407dacdb0f2621b619",
+      "id": 6,
+      "name": "Big Mike",
+      "email": "bigmike@mike.com",
+      "gender": "male",
+      "age": 52,
+      "height": 66,
+      "weight": 300,
+      "activitylevelId": 2
     },
     {
-        "id": 6,
-        "name": "Calcium"
-    },
-    {
-        "id": 7,
-        "name": "Potassium"
-    },
-    {
-        "id": 8,
-        "name": "Vitamin D"
+      "aud": "auth0|5dadef974e98ec0f2b5a6960",
+      "id": 9,
+      "name": "frank",
+      "age": null,
+      "height": null,
+      "weight": null,
+      "activitylevelId": null
     }
-
-],
-  "recipenutrients": [],
-  "activitylevels": [
-    { "id": 1, "name": "Sedentary" },
+  ],
+  "recipes": [
+    {
+      "label": "Pumpkin Pasta",
+      "url": "https://elavegan.com/pumpkin-pasta-bake/",
+      "id": 1,
+      "mealTypeId": 4,
+      "userId": 2,
+      "archived": false
+    },
+    {
+      "label": "Pasta Vodka",
+      "url": "https://ericasrecipes.com/vegan-pasta-alla-vodka/",
+      "id": 3,
+      "mealTypeId": 1,
+      "userId": 4,
+      "archived": false
+    },
+    {
+      "label": "Pumpkin Seed Hummus",
+      "url": "https://crumbsandcaramel.com/roasted-pumpkin-seed-hummus/",
+      "id": 6,
+      "mealTypeId": 4,
+      "userId": 6,
+      "archived": false
+    },
+    {
+      "label": "Green Goddess Wrap",
+      "url": "https://www.chefcharitymorgan.com/recipes/2019/7/11/green-goddess-wrap",
+      "id": 7,
+      "mealTypeId": 1,
+      "userId": 6,
+      "archived": false
+    },
+    {
+      "label": "Jambalaya",
+      "url": "https://skinnyms.com/vegan-jambalaya-2/",
+      "archived": false,
+      "id": 9,
+      "mealTypeId": 1,
+      "userId": 3
+    },
+    {
+      "label": "Breakfast Sandwich",
+      "url": "https://veganhuggs.com/vegan-breakfast-sandwich/",
+      "userId": 3,
+      "archived": false,
+      "id": 10
+    },
+    {
+      "label": "Blueberry Waffles",
+      "url": "http://www.isachandra.com/2012/10/blueberry-oatmeal-waffles/",
+      "mealTypeId": 2,
+      "userId": 3,
+      "archived": true,
+      "id": 11
+    },
+    {
+      "label": "Wild Rice Mushroom Soup",
+      "url": "https://highcarbhannah.co/recipes/creamy-wild-rice-soup-vegan-oil-free/",
+      "mealTypeId": 3,
+      "userId": 3,
+      "archived": false,
+      "id": 12
+    },
+    {
+      "label": "Roasted Veggies and Tempeh ",
+      "url": "https://www.simplyquinoa.com/meal-prep-balsamic-tempeh-roasted-vegetable-quinoa-bowls/",
+      "mealTypeId": 1,
+      "userId": 3,
+      "archived": true,
+      "id": 13
+    },
+    {
+      "label": "a recipe",
+      "url": "recipe.com",
+      "mealTypeId": 2,
+      "userId": 3,
+      "archived": true,
+      "id": 14
+    },
+    {
+      "label": "Breakfast Burrito",
+      "url": "burrito.com",
+      "mealTypeId": 3,
+      "userId": 3,
+      "archived": false,
+      "id": 15
+    }
+  ],
+  "nutrients": [
+    {
+      "id": 1,
+      "value": "Protein",
+      "label": "Protein",
+      "apiCode": "[PROCNT]=10%2B"
+    },
     {
       "id": 2,
-      "name": "Low Active"
+      "value": "Fat",
+      "label": "Fat",
+      "apiCode": "[FAT]=50%2B"
     },
     {
       "id": 3,
-      "name": "Active"
+      "value": "Carbohydrates",
+      "label": "Carbohydrates",
+      "apiCode": "[CHOCDF]=50%2B"
     },
     {
       "id": 4,
-      "name": "Very Active"
+      "value": "Fiber",
+      "label": "Fiber",
+      "apiCode": "[FIBTG]=10%2B"
+    },
+    {
+      "id": 5,
+      "value": "Iron",
+      "label": "Iron",
+      "apiCode": "[FE]=10%2B"
+    },
+    {
+      "id": 6,
+      "value": "Calcium",
+      "label": "Calcium",
+      "apiCode": "[CA]=300%2B"
+    },
+    {
+      "id": 7,
+      "label": "Potassium",
+      "value": "Potassium",
+      "apiCode": "[K]=1500%2B"
+    },
+    {
+      "id": 8,
+      "value": "Vitamin D",
+      "label": "Vitamin D",
+      "apiCode": "[VITD]=200%2B"
+    }
+  ],
+  "mealTypes": [
+    {
+      "id": 1,
+      "value": "Dinner",
+      "label": "Dinner"
+    },
+    {
+      "id": 2,
+      "value": "Breakfast",
+      "label": "Breakfast"
+    },
+    {
+      "id": 3,
+      "value": "Lunch",
+      "label": "Lunch"
+    },
+    {
+      "id": 4,
+      "value": "Snacks",
+      "label": "Snacks"
+    }
+  ],
+  "recipe_nutrients": [
+    {
+      "recipeId": 1,
+      "nutrientId": 4,
+      "id": 1
+    },
+    {
+      "recipeId": 1,
+      "nutrientId": 3,
+      "id": 2
+    },
+    {
+      "recipeId": 3,
+      "nutrientId": 3,
+      "id": 5
+    },
+    {
+      "recipeId": 3,
+      "nutrientId": 1,
+      "id": 6
+    },
+    {
+      "recipeId": 6,
+      "nutrientId": 4,
+      "id": 11
+    },
+    {
+      "recipeId": 6,
+      "nutrientId": 5,
+      "id": 12
+    },
+    {
+      "recipeId": 7,
+      "nutrientId": 3,
+      "id": 13
+    },
+    {
+      "recipeId": 7,
+      "nutrientId": 5,
+      "id": 14
+    },
+    {
+      "recipeId": 9,
+      "nutrientId": 3,
+      "id": 16
+    },
+    {
+      "recipeId": 10,
+      "nutrientId": 1,
+      "id": 17
+    },
+    {
+      "recipeId": 10,
+      "nutrientId": 4,
+      "id": 18
+    },
+    {
+      "recipeId": 10,
+      "nutrientId": 3,
+      "id": 19
+    },
+    {
+      "recipeId": 11,
+      "nutrientId": 5,
+      "id": 20
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 4,
+      "id": 21
+    },
+    {
+      "recipeId": 13,
+      "nutrientId": 4,
+      "id": 22
+    },
+    {
+      "recipeId": 11,
+      "nutrientId": 4,
+      "id": 23
+    },
+    {
+      "recipeId": 11,
+      "nutrientId": 3,
+      "id": 24
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 3,
+      "id": 25
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 4,
+      "id": 26
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 1,
+      "id": 27
+    },
+    {
+      "recipeId": 12,
+      "nutrientId": 1,
+      "id": 28
+    },
+    {
+      "recipeId": 13,
+      "nutrientId": 4,
+      "id": 29
+    },
+    {
+      "recipeId": 13,
+      "nutrientId": 3,
+      "id": 30
+    },
+    {
+      "recipeId": 13,
+      "nutrientId": 1,
+      "id": 31
+    },
+    {
+      "recipeId": 14,
+      "nutrientId": 2,
+      "id": 32
+    },
+    {
+      "recipeId": 14,
+      "nutrientId": 6,
+      "id": 33
+    },
+    {
+      "recipeId": 15,
+      "nutrientId": 1,
+      "id": 34
+    },
+    {
+      "recipeId": 15,
+      "nutrientId": 5,
+      "id": 35
+    }
+  ],
+  "activitylevels": [
+    {
+      "id": 1,
+      "name": "Sedentary",
+      "mvalue": 1,
+      "fvalue": 1
+    },
+    {
+      "id": 2,
+      "name": "Moderately Active",
+      "mvalue": 1.11,
+      "fvalue": 1.12
+    },
+    {
+      "id": 3,
+      "name": "Active",
+      "mvalue": 1.26,
+      "fvalue": 1.27
+    },
+    {
+      "id": 4,
+      "name": "Very Active",
+      "mvalue": 1.48,
+      "fvalue": 1.45
     }
   ]
 }
