@@ -24,7 +24,6 @@ class MyRecipeList extends Component {
   };
   // method to collect values in dropdown selection
   _onChange(value) {
-    //console.log(value) - just to see what we recive from <Select />
     this.setState({ selectValues: value });
   }
   // method to collect values in dropdown for multi select

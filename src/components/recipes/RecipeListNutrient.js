@@ -22,7 +22,7 @@ class RecipeNutrientList extends Component {
     );
   }
   render() {
-    // return a car with recipe and url link
+    // return a card with recipe and url link
     return (
       <>
         <section className="recipe-list"></section>

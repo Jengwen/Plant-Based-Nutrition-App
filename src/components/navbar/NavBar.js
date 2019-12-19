@@ -20,6 +20,7 @@ class NavBar extends Component {
           <img id="logo" src={logo} alt="leaf logo" className="media-object" />
         </div>
         <div className="media-body">
+          {/* Headings and Nav Bar for home page */}
           <h1 className="media-heading">Personalized Plant Based Nutrition</h1>
           <Navbar bg="light" expand="lg">
             <Navbar.Brand href="/home"></Navbar.Brand>

@@ -86,6 +86,7 @@ class Calculator extends Component {
         vitaminB6Prop= {this.state.B6}{...this.props}
         fiberProp= {this.state.fiber}{...this.props}
         />
+        {/* render graph compnonent for the macrunutrients */}
         <Graph
          proteinProp ={this.state.protein}
         carbProp= {this.state.carbohydrates}

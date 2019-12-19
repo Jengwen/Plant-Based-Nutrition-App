@@ -7,7 +7,7 @@ import "./Recipe.css";
 class RecipeCard extends Component {
 
   render() {
-    // return general recipe card to display recipe micro links
+    // return reusable recipe card to display recipe micro links
     return (
       <div className="card">
         <div className="card-content">

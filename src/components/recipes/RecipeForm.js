@@ -7,6 +7,8 @@ import MealTypeMgr from "../../modules/MealTypeMgr";
 import Select from "react-select";
 
 class RecipeForm extends Component {
+    //define what this component needs to render
+
   state = {
     label: "",
     url: "",
@@ -16,7 +18,7 @@ class RecipeForm extends Component {
     selectValues: [],
     selectValue:[]
   };
-
+// method to collect field input from form
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
