@@ -36,11 +36,11 @@ I used React Bootstrap and Microlinks for styling, Charts-js for graphs, and Sel
 
 This project was built with the following:
 
-  [React](https://www.reactjs.org "React's Homepage")
-  [React Bootstrap](https://react-bootstrap.github.io/ "Bootstrap Homepage")
-  [Microlinks](https://microlink.io/docs/sdk/integrations/react)
-  [ChartsJs](https://www.chartjs.org/docs/latest/)
-  [React Select](https://react-select.com/home)
+*  [React](https://www.reactjs.org "React's Homepage")
+*  [React Bootstrap](https://react-bootstrap.github.io/ "Bootstrap Homepage")
+*  [Microlinks](https://microlink.io/docs/sdk/integrations/react)
+*  [ChartsJs](https://www.chartjs.org/docs/latest/)
+*  [React Select](https://react-select.com/home)
 
 
 ### Using this APP
