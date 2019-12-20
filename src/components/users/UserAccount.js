@@ -119,7 +119,7 @@ class UserAccount extends Component {
               />
             </Form.Group>
             <Form.Group controlId="gender">
-              <Form.Label>Gender</Form.Label>
+              <Form.Label id="select-label">Gender</Form.Label>
               <select
                 id="gender"
                 value={this.state.gender}
@@ -130,7 +130,7 @@ class UserAccount extends Component {
               </select>
             </Form.Group>
             <Form.Group controlId="activitylevelId">
-              <Form.Label>Activity Level</Form.Label>
+              <Form.Label  id="select-label">Activity Level</Form.Label>
               <select
                 id="activitylevelId"
                 value={this.state.activitylevelId}

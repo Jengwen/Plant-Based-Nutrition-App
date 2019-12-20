@@ -1,4 +1,5 @@
 Form {
+   margin-top: 1.5em;
 width: 50vw
 }
 #report-btn.btn.btn-light {
@@ -8,5 +9,10 @@ width: 50vw
 margin-left: 20em
 }
 #user-dashboard-header{
+   margin-top: 1em;
    font-family: Cabin;
+   color: #82846d;
+}
+#select-label{
+   margin-right: 1em;
 }

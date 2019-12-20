@@ -10,9 +10,9 @@ class RecipeCard extends Component {
     // return reusable recipe card to display recipe micro links
     return (
       <div className="card">
-        <div className="card-content">
+        <div className="card-content" id="card-content">
           <h3>
-            Title:{" "}
+            {" "}
             <span className="card-recipe">{this.props.recipeProp.label}</span>
           </h3>
           <Microlink url={this.props.recipeProp.url} size="normal"/>
@@ -20,6 +20,7 @@ class RecipeCard extends Component {
           <Button
             variant="light"
             type="submit"
+            id="delete-btn"
             size="lg"
             onClick={()=>{this.props.deleteRecipe(this.props.recipeProp.id)}}
           >

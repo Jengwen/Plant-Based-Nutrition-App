@@ -7,7 +7,7 @@ class Callback extends Component {
     await auth0Client.handleAuthentication();
 
     // Needs to be refactored, put in its own module, etc
-    fetch(`http://localhost:5002/users?aud=${auth0Client.getProfile().sub}`)
+    fetch(`http://localhost:5001/users?aud=${auth0Client.getProfile().sub}`)
       .then(matchingUser => matchingUser.json())
       .then(matchingUser => {
            // If the the fetch call comes back empty, it means that the user who just logged in with Auth 0 doesn't exist in our json-server database. We need to register them!
