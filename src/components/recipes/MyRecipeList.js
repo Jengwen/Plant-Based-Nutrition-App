@@ -12,7 +12,8 @@ class MyRecipeList extends Component {
   state = {
     recipes: [],
     mealTypes: [],
-    selectValueMeal: []
+    selectValues: [],
+    selectValue: []
   };
   // method to gather info from search field
   handleFieldChange = evt => {

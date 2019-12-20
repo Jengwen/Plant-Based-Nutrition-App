@@ -16,6 +16,7 @@ class NavBar extends Component {
     return (
       <header className="media">
         <div className="media-body">
+          {/* Headings and Nav Bar for home page */}
           <h1 className="media-heading">Personalized Plant Based Nutrition</h1>
 <Navbar id= "nav"  expand="lg">
             <Navbar.Brand id= "nav" href="/home"></Navbar.Brand>

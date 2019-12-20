@@ -6,6 +6,7 @@ import { Form, Button } from "react-bootstrap";
 import "./Recipe.css";
 
 class RecipeSearch extends Component {
+  //   //define what this component needs to render
   state = {
     searchValue: "",
     label: "",
@@ -24,7 +25,7 @@ class RecipeSearch extends Component {
     evt.preventDefault();
     this.setState({loadingStatus: true})
     const search = this.state.searchValue
-
+// method to get recipe by string value from the external API
     APIMgr.getRecipebyString(search).then(recipes => {
         console.log(recipes.hits)
          this.setState({

@@ -31,6 +31,7 @@ class RecipeList extends Component {
   }
   render() {
     return (
+      // return list of recipe cards
       <>
         <section className="recipe-list">
           <div className="container-cards">

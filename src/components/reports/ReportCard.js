@@ -38,8 +38,7 @@ class UserReport extends Component {
               </div>
             </div>
           </section>
-          {/* <div id="pie-chart">
-    </div> */}
+         
           <div id="micro">
             <h3 id="micro-header">Micronutrients:</h3>
             <div id="micro-details">

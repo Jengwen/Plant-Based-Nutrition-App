@@ -32,6 +32,7 @@ export default {
   getCarbs(calories) {
     return (calories * 0.45) / 4;
   },
+  // conditional statement for calcium requirements
   getCalcium(gender, age) {
     if (gender === "female" && age > 50) {
       return 1200;
@@ -39,6 +40,7 @@ export default {
       return 1000;
     }
   },
+  // conditional for Iron requirements
   getIron(gender, age) {
     if (gender === "female" && age > 50) {
       return 8;
@@ -48,6 +50,7 @@ export default {
       return 8;
     }
   },
+  // conditional for Niacin requirements
   getNiacin(gender) {
     if (gender === "female") {
       return 14;
@@ -55,6 +58,7 @@ export default {
       return 16;
     }
   },
+  // condtional statement for Vitamin C requirements
   getVitaminC(gender) {
     if (gender === "female") {
       return 75;
@@ -62,6 +66,7 @@ export default {
       return 90;
     }
   },
+  // conditional statement for B6 requirements
   getB6(gender, age) {
     if (gender === "female" && age > 51) {
       return 1.5;
@@ -71,6 +76,7 @@ export default {
       return 1.3;
     }
   },
+  // conditional statemnt for fiber requirements
   getFiber(gender, age) {
     if (gender === "female" && age <= 30) {
       return 28;

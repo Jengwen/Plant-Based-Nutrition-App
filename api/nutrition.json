@@ -16,10 +16,10 @@
       "id": 3,
       "name": "Avery Elaine",
       "email": "avery@avery.com",
-      "gender": "male",
-      "age": 25,
-      "height": 61,
-      "weight": 140,
+      "gender": "female",
+      "age": 15,
+      "height": 65,
+      "weight": 100,
       "activitylevelId": 1
     },
     {
@@ -127,20 +127,12 @@
       "id": 13
     },
     {
-      "label": "a recipe",
-      "url": "recipe.com",
-      "mealTypeId": 2,
-      "userId": 3,
-      "archived": true,
-      "id": 14
-    },
-    {
-      "label": "Breakfast Burrito",
-      "url": "burrito.com",
-      "mealTypeId": 3,
+      "label": "Spicy Vegan Noodles",
+      "url": "https://www.rabbitandwolves.com/vegan-spicy-thai-peanut-ramen/",
+      "mealTypeId": 1,
       "userId": 3,
       "archived": false,
-      "id": 15
+      "id": 14
     }
   ],
   "nutrients": [
@@ -323,8 +315,13 @@
     },
     {
       "recipeId": 13,
-      "nutrientId": 4,
+      "nutrientId": 3,
       "id": 29
+    },
+    {
+      "recipeId": 14,
+      "nutrientId": 3,
+      "id": 30
     },
     {
       "recipeId": 13,

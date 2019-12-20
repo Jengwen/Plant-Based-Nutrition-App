@@ -6,6 +6,7 @@ class ResourceList extends Component {
   render() {
     return (
         <>
+        {/* links for documentaries */}
       <div className="documentaries">
           <h3 id="resource-header">Documentaries</h3>
         <div className="documentaries-content">

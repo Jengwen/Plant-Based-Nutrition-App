@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Pie } from "react-chartjs-2";
 
 class Graph extends Component {
+  // build graph component
   // set props for graph data
   constructor(props) {
     super(props);
@@ -20,8 +21,6 @@ class Graph extends Component {
   }
 
   componentDidMount() {
-    console.log("Graph: ComponentDidMount");
-    // set state of data, labels
     this.setState({
       graphData: {
         labels: [],
@@ -43,6 +42,7 @@ class Graph extends Component {
       datasets: [
         {
           label: "Macronutrients",
+          // return props from  macronutrient calculations
           data: [
             this.props.proteinProp,
             this.props.carbProp,
@@ -53,6 +53,7 @@ class Graph extends Component {
       backgroundColor: ["rgba(255, 99, 132, 0.6)"]
     };
     return (
+      // return the graph
       <div>
         <Pie
           data={graphData}
