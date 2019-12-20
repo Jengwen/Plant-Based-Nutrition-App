@@ -8,10 +8,10 @@ The target users for this application are people new to plant based eating or th
 
 ## Home
 Users begin at the home page where they are asked to log in or register through the 0Auth process.
-![logIn](src\components\home\logIn.jpg)
+![logIn](C:\Users\newforce37\workspace\capstone\my-app\public\logIn.jpg)
 Once logged in the user is directed to their personal dashboard where they must enter their personal data to see their individual calculations.
 Upon submitting this information the user is directed to a personal nutrition report.
-![input](src\components\home\inputForm.gif)
+![input](public\inputForm.gif)
 
 ## Personal Nutrition Report
 
