@@ -22,18 +22,8 @@ class MyRecipeList extends Component {
     this.setState(stateToChange);
   };
   // method to collect values in dropdown selection
-<<<<<<< HEAD
-  _onChange(value) {
-    this.setState({ selectValues: value });
-  }
-  // method to collect values in dropdown for multi select
-  _onChanges(value) {
-    console.log(value);
-    this.setState({ selectValue: value });
-=======
   _onChangeMeal(value) {
     this.setState({ selectValueMeal: value });
->>>>>>> master
   }
   // call method to delete recipe and return refreshed list of recipes by Userid
   deleteRecipe = id => {
@@ -69,12 +59,8 @@ class MyRecipeList extends Component {
       });
     });
 
-<<<<<<< HEAD
-     }
-=======
 
   }
->>>>>>> master
   render() {
 
     // create select dropdown form for mealTypes in array

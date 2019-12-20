@@ -16,17 +16,10 @@
       "id": 3,
       "name": "Avery Elaine",
       "email": "avery@avery.com",
-<<<<<<< HEAD
       "gender": "female",
       "age": 15,
       "height": 65,
       "weight": 100,
-=======
-      "gender": "male",
-      "age": 25,
-      "height": 61,
-      "weight": 140,
->>>>>>> master
       "activitylevelId": 1
     },
     {
@@ -126,42 +119,20 @@
       "id": 12
     },
     {
-<<<<<<< HEAD
-      "label": "Spicy Peanut Ramen",
-      "url": "https://www.rabbitandwolves.com/vegan-spicy-thai-peanut-ramen/",
-=======
       "label": "Roasted Veggies and Tempeh ",
       "url": "https://www.simplyquinoa.com/meal-prep-balsamic-tempeh-roasted-vegetable-quinoa-bowls/",
->>>>>>> master
       "mealTypeId": 1,
       "userId": 3,
       "archived": true,
       "id": 13
     },
     {
-<<<<<<< HEAD
       "label": "Spicy Vegan Noodles",
       "url": "https://www.rabbitandwolves.com/vegan-spicy-thai-peanut-ramen/",
       "mealTypeId": 1,
       "userId": 3,
       "archived": false,
       "id": 14
-=======
-      "label": "a recipe",
-      "url": "recipe.com",
-      "mealTypeId": 2,
-      "userId": 3,
-      "archived": true,
-      "id": 14
-    },
-    {
-      "label": "Breakfast Burrito",
-      "url": "burrito.com",
-      "mealTypeId": 3,
-      "userId": 3,
-      "archived": false,
-      "id": 15
->>>>>>> master
     }
   ],
   "nutrients": [
@@ -344,7 +315,6 @@
     },
     {
       "recipeId": 13,
-<<<<<<< HEAD
       "nutrientId": 3,
       "id": 29
     },
@@ -352,9 +322,6 @@
       "recipeId": 14,
       "nutrientId": 3,
       "id": 30
-=======
-      "nutrientId": 4,
-      "id": 29
     },
     {
       "recipeId": 13,
@@ -385,7 +352,6 @@
       "recipeId": 15,
       "nutrientId": 5,
       "id": 35
->>>>>>> master
     }
   ],
   "activitylevels": [
