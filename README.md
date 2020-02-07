@@ -65,7 +65,6 @@ This project was built with the following:
 
 *  [React](https://www.reactjs.org "React's Homepage")
 *  [React Bootstrap](https://react-bootstrap.github.io/ "Bootstrap Homepage")
-*  [Microlinks](https://microlink.io/docs/sdk/integrations/react)
 *  [ChartsJs](https://www.chartjs.org/docs/latest/)
 *  [React Select](https://react-select.com/home)
 
@@ -80,7 +79,6 @@ You will need to install the following to run the program locally:
 
 ```npm install
 npm install --save react-chartjs-2 chart.js
-npm install @microlink/react styled-components --save
 npm install react-select
 ```
 In the project directory, you can run:
@@ -91,8 +89,8 @@ Which runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser. The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-You must also run the following command in a separate command prompt to initiate the database. These steps will let you run a json server with the nutrition.json from the api directory, and allow all of the fetch calls in modules to interact with that data. ```
-cd api
+You must also run the following command in a separate command prompt to initiate the database. These steps will let you run a json server with the nutrition.json from the api directory, and allow all of the fetch calls in modules to interact with that data. 
+```cd api
 json-server -p 5001 -w nutrition.json
 ```
 
