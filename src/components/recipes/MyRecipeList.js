@@ -87,11 +87,11 @@ class MyRecipeList extends Component {
       <>
         <section id="filter">
           {/* filter select boxes to filter recipes */}
-          <Form id="recipe-filter">
+        {/*  <Form id="recipe-filter">
             <Form.Label id="filter-label">Filter By Meal Type</Form.Label>
             {/* single select box for meal type */}
-            {mealTypeSelect()}
-          </Form>
+          {/* {mealTypeSelect()}
+         {/* </Form> */}
         </section>
         <section id="my-recipe-list">
           {/* returns list of recipes by user and if filtered by filter options selected */}

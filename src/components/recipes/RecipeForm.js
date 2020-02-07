@@ -12,6 +12,7 @@ class RecipeForm extends Component {
   state = {
     label: "",
     url: "",
+    imageUrl: "",
     userId: "",
     nutrients: [],
     mealTypes: [],
@@ -42,6 +43,7 @@ class RecipeForm extends Component {
       const recipe = {
         label: this.state.label,
         url: this.state.url,
+        imageUrl: this.state.imageUrl,
         mealTypeId: this.state.selectValue.id,
         userId: this.state.userId,
         archived: false
@@ -125,6 +127,10 @@ class RecipeForm extends Component {
             </Form.Group>
             <Form.Group controlId="url">
               <Form.Label>Recipe Url</Form.Label>
+              <Form.Control onChange={this.handleFieldChange} />
+            </Form.Group>
+            <Form.Group controlId="imageUrl">
+              <Form.Label>Recipe Image Url</Form.Label>
               <Form.Control onChange={this.handleFieldChange} />
             </Form.Group>
             <Form.Label>Meal Type</Form.Label>

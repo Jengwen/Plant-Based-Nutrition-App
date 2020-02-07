@@ -56,7 +56,7 @@ class RecipeSearch extends Component {
               <Form.Control
                 type="text"
                 id="searchValue"
-                 onClick= {this.handleFieldChange}
+                 onChange= {this.handleFieldChange}
                 size="lg"
                 placeholder="Search for recipes by keyword "
               />

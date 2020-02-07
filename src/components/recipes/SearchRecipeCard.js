@@ -1,6 +1,6 @@
 //import the components we will need
 import React, { Component } from "react";
-import { Card } from "react-bootstrap";
+import { Card, CardDeck  } from "react-bootstrap";
 import "./Recipe.css";
 
 class SearchRecipeCard extends Component {
@@ -8,6 +8,7 @@ class SearchRecipeCard extends Component {
     return (
       // return recipe cards with link to recipes search results
       <div className="card">
+        <CardDeck>
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={this.props.recipeProp.recipe.image} />
           <Card.Body>
@@ -19,6 +20,7 @@ class SearchRecipeCard extends Component {
             </Card.Link>
           </Card.Body>
         </Card>
+        </CardDeck>
       </div>
     );
   }

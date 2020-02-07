@@ -58,6 +58,7 @@
     {
       "label": "Pumpkin Pasta",
       "url": "https://elavegan.com/pumpkin-pasta-bake/",
+      "imageUrl": "https://elavegan.com/wp-content/uploads/2019/09/eating-pumpkin-pasta-bake.jpg",
       "id": 1,
       "mealTypeId": 4,
       "userId": 2,
@@ -66,6 +67,7 @@
     {
       "label": "Pasta Vodka",
       "url": "https://ericasrecipes.com/vegan-pasta-alla-vodka/",
+      "imageUrl": "https://ericasrecipes.com/wp-content/uploads/2016/12/Vegan-Pasta-alla-Vodka-1a.jpg",
       "id": 3,
       "mealTypeId": 1,
       "userId": 4,
@@ -74,6 +76,7 @@
     {
       "label": "Pumpkin Seed Hummus",
       "url": "https://crumbsandcaramel.com/roasted-pumpkin-seed-hummus/",
+      "imageUrl": "https://i1.wp.com/crumbsandcaramel.com/wp-content/uploads/2019/01/20181202_150002.jpg?resize=720%2C900&ssl=1",
       "id": 6,
       "mealTypeId": 4,
       "userId": 6,
@@ -82,6 +85,7 @@
     {
       "label": "Green Goddess Wrap",
       "url": "https://www.chefcharitymorgan.com/recipes/2019/7/11/green-goddess-wrap",
+      "imageUrl": "https://images.squarespace-cdn.com/content/v1/5a32086a1f318d37f3622465/1562876863120-P758EE2KUK46OY6M1XPA/ke17ZwdGBToddI8pDm48kCXTVg0ByO0p77g6bpZL7-t7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmT2Rk9u7KA3hFIM978bk877VmOHOCSpdsNlW7GlpXIXYQVtHu55YcHOEzPLgr3oRG/58701418_448129632663259_8296118022053938487_n.jpg?format=1000w",
       "id": 7,
       "mealTypeId": 1,
       "userId": 6,
@@ -90,6 +94,7 @@
     {
       "label": "Jambalaya",
       "url": "https://skinnyms.com/vegan-jambalaya-2/",
+      "imageUrl": "https://skinnyms.com/wp-content/uploads/2018/03/Vegan-Jambalaya-Healthy-Vegan-Dinner-Recipes3-750x498.jpg",
       "archived": false,
       "id": 9,
       "mealTypeId": 1,
@@ -98,6 +103,7 @@
     {
       "label": "Breakfast Sandwich",
       "url": "https://veganhuggs.com/vegan-breakfast-sandwich/",
+      "imageUrl": "https://veganhuggs.com/wp-content/uploads/2016/05/veganbreakfastsandwich2-768x1152.jpg",
       "userId": 3,
       "archived": false,
       "id": 10
@@ -105,14 +111,16 @@
     {
       "label": "Blueberry Waffles",
       "url": "http://www.isachandra.com/2012/10/blueberry-oatmeal-waffles/",
+      "imageUrl": "http://farm9.staticflickr.com/8194/8113312680_a60b5e0741_z.jpg",
       "mealTypeId": 2,
       "userId": 3,
-      "archived": true,
+      "archived": false,
       "id": 11
     },
     {
       "label": "Wild Rice Mushroom Soup",
       "url": "https://highcarbhannah.co/recipes/creamy-wild-rice-soup-vegan-oil-free/",
+      "imageUrl": "https://highcarbhannah.co/wp-content/uploads/2019/10/5L4A9029-2.jpg",
       "mealTypeId": 3,
       "userId": 3,
       "archived": false,
@@ -121,18 +129,38 @@
     {
       "label": "Roasted Veggies and Tempeh ",
       "url": "https://www.simplyquinoa.com/meal-prep-balsamic-tempeh-roasted-vegetable-quinoa-bowls/",
+      "imageUrl": "https://www.simplyquinoa.com/wp-content/uploads/2017/04/balsamic-roasted-vegetable-quinoa-bowls-4-768x1152.jpg",
       "mealTypeId": 1,
       "userId": 3,
-      "archived": true,
+      "archived": false,
       "id": 13
     },
     {
       "label": "Spicy Vegan Noodles",
       "url": "https://www.rabbitandwolves.com/vegan-spicy-thai-peanut-ramen/",
+      "imageUrl": "https://www.rabbitandwolves.com/wp-content/uploads/2018/10/DSC_0873.jpg",
       "mealTypeId": 1,
       "userId": 3,
       "archived": false,
       "id": 14
+    },
+    {
+      "label": "Vegan Risotto",
+      "url": "https://www.noracooks.com/wp-content/uploads/2019/08/IMG_7246.jpg",
+      "imageUrl": "https://www.noracooks.com/wp-content/uploads/2019/08/IMG_7246.jpg",
+      "mealTypeId": 1,
+      "userId": 3,
+      "archived": false,
+      "id": 15
+    },
+    {
+      "label": "Hashbrowns",
+      "url": "https://elavegan.com/vegan-hash-browns/",
+      "imageUrl": "https://elavegan.com/wp-content/uploads/2020/01/hand-grabbing-one-of-6-vegan-potato-pancakes-on-a-cyan-plate.jpg",
+      "mealTypeId": 2,
+      "userId": 3,
+      "archived": false,
+      "id": 16
     }
   ],
   "nutrients": [
@@ -352,6 +380,21 @@
       "recipeId": 15,
       "nutrientId": 5,
       "id": 35
+    },
+    {
+      "recipeId": 15,
+      "nutrientId": 3,
+      "id": 36
+    },
+    {
+      "recipeId": 15,
+      "nutrientId": 4,
+      "id": 37
+    },
+    {
+      "recipeId": 16,
+      "nutrientId": 7,
+      "id": 38
     }
   ],
   "activitylevels": [

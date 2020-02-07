@@ -1,7 +1,6 @@
 //import the components we will need
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
-import Microlink from "@microlink/react";
+import { Button, CardDeck, Card } from "react-bootstrap";
 import "./Recipe.css";
 
 class RecipeCard extends Component {
@@ -15,9 +14,18 @@ class RecipeCard extends Component {
             {" "}
             <span className="card-recipe">{this.props.recipeProp.label}</span>
           </h3>
-          <Microlink url={this.props.recipeProp.url} size="normal"/>
-          {/* add delete button */}
-          <Button
+<CardDeck>
+  <Card>
+  <Card.Img variant="top" height= {500} width= {300} src={this.props.recipeProp.imageUrl} />
+    <Card.Body>
+      <Card.Title>{this.props.recipeProp.label}</Card.Title>
+      <Card.Text>
+      <Card.Link href={this.props.recipeProp.url}>See Recipe</Card.Link>
+      </Card.Text>
+    </Card.Body>
+    <Card.Footer>
+       {/* add delete button */}
+       <Button
             variant="light"
             type="submit"
             id="delete-btn"
@@ -26,6 +34,13 @@ class RecipeCard extends Component {
           >
             Delete
           </Button>
+    </Card.Footer>
+  </Card>
+</CardDeck>
+
+
+
+
         </div>
       </div>
     );
