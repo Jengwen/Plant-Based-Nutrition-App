@@ -17,10 +17,10 @@
       "name": "Avery Elaine",
       "email": "avery@avery.com",
       "gender": "female",
-      "age": 15,
+      "age": 25,
       "height": 65,
-      "weight": 100,
-      "activitylevelId": 1
+      "weight": 125,
+      "activitylevelId": 3
     },
     {
       "aud": "auth0|5da9c9fad5646a0e18ef86a7",
